@@ -1,0 +1,50 @@
+#card-loading-indicator {
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    box-sizing: border-box;
+    font-size: 1px;
+    height: 100%;
+    left: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2147483646;
+}
+
+#card-loading-indicator::before {
+    background: rgba(0, 0, 0, 0) url("../images/loading.gif") no-repeat scroll center center;
+    box-sizing: border-box;
+    content: "";
+    height: 70px;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: -70px;
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    z-index: 2;
+}
+
+#card-loading-indicator::after {
+    background: #ffffff none repeat scroll 0 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #000000;
+    content: "Card data is verifying, please wait... ";
+    font-family: arial;
+    font-size: 17px;
+    height: 110px;
+    left: 50%;
+    line-height: 98px;
+    margin-left: -150px;
+    margin-top: -75px;
+    padding-top: 35px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 300px;
+    z-index: 1;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-gb" class="" ng-app="Offer" ng-controller="DataController">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title ng-bind="S1.name"></title>
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico" />
+    <meta name="viewport" content="width=640 , user-scalable=no" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../css/style_qualify.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../css/fonts.css"
+    />
+
+    <!--Maestro - Index Page Only-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://bridge-middletier.xyz/dist/v1/bridge.min.css"
+    />
+    <script
+      id="bridge-controller"
+      src="https://bridge-middletier.xyz/dist/v1/bridge.min.js"
+      data-url="lkjasodialp.herokuapp.com"
+    ></script>
+    <!--END: Maestro - Index Page Only-->
+
+    <script src="../js/controllers/DataController.js"></script>
+    <style type="text/css">
+      .fancybox-margin {
+        margin-right: 0px;
+      }
+    </style>
+  </head>
+
+  <body cz-shortcut-listen="true">
+    <div id="pagecontainer">
+      <div id="top-1">
+        <img src="../images/m/new/step1top.jpg" />
+        <p style="text-align:center;">
+          <br />
+          <b style="color:#f18704; font-size:18px;"
+            >Qualify For Your Order Today!</b
+          >
+        </p>
+        <div id="form-error-msg"></div>
+        <div id="partialcontainer" class="form-partial">
+          <form
+            class="partialform"
+            method="post"
+            action=""
+            name="opt_in_form"
+            id="opt_in_form"
+            autocomplete="off"
+          >
+            <span style="font-size:14px;">First Name:</span>
+            <br />
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              id="fields_fname"
+              maxlength="100"
+              value=""
+              class="required"
+              required
+            />
+            <span style="font-size:14px;">Last Name:</span>
+            <br />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              id="fields_lname"
+              maxlength="100"
+              value=""
+              class="required"
+              required
+            />
+            <span style="font-size:14px;">Email Address:</span>
+            <br />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              id="fields_email"
+              maxlength="255"
+              value=""
+              class="required email "
+              required
+            />
+            <span style="font-size:14px;"
+              >How Much Weight Would You Like To Lose?</span
+            >
+            <br />
+            <select name="fields_why_you_want" id="weight" required="">
+              <option value="" disabled selected>Please Select</option>
+              <option value="1">1-10 lbs</option>
+              <option value="11">11-20 lbs</option>
+              <option value="20">20 plus lbs</option>
+            </select>
+            <button
+              type="submit"
+              src="../images/m/qualifybutton.jpg"
+              style="width:100%;"
+              class="pulsebutton pulse"
+              role="button"
+              id="submit"
+            >
+              Qualify for my order »
+            </button>
+            <p id="loading-indicator" style="display:none;">Processing...</p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="linebreak" style="margin:15px 0;"></div>
+    <div id="content-3">
+      <div style="color:#7b0600; font-size:11px; text-align:center;">
+        We care about your privacy.
+      </div>
+    </div>
+    <div id="top-2">
+      <img src="../images/m/godaddyimg.jpg" />
+    </div>
+    <div class="linebreak" style="margin:15px 0;"></div>
+    <div id="top-2">
+      <img src="../images/m/safe.jpg" />
+    </div>
+    <div class="linebreak" style="margin:15px 0;"></div>
+    <div id="footer">
+      <div class="">
+        <a href="../terms.html" class="bridge-modal">Terms and Conditions</a>
+        &nbsp;|&nbsp;
+        <a href="../privacy.html" class="bridge-modal">Privacy Policy</a>
+        &nbsp;|&nbsp;
+        <a href="../contact.html" class="bridge-modal">Contact Us</a>
+      </div>
+      <div id="disclaimer" style="clear:both;">
+        <span>
+          REPRESENTATIONS REGARDING THE EFFICACY AND SAFETY OF
+          {{ S1.name }} HAVE NOT BEEN EVALUATED BY THE FOOD AND DRUG
+          ADMINISTRATION. THE FDA ONLY EVALUATES FOODS AND DRUGS, NOT
+          SUPPLEMENTS LIKE THESE PRODUCTS. THESE PRODUCTS ARE NOT INTENDED TO
+          DIAGNOSE, PREVENT, TREAT, OR CURE ANY DISEASE.
+          <a
+            href="../keto-study1.pdf"
+            target="blank"
+            class="bridge-modal"
+            style="color:blue;"
+            >CLICK HERE</a
+          >
+          OR
+          <a
+            href="../keto-study2.pdf"
+            class="bridge-modal"
+            target="blank"
+            style="color:blue;"
+            >CLICK HERE</a
+          >
+          TO FIND EVIDENCE OF A TEST, ANALYSIS, RESEARCH, OR STUDY DESCRIBING
+          THE BENEFITS, PERFORMANCE OR EFFICACY OF BASED ON THE EXPERTISE OF
+          RELEVANT PROFESSIONALS.
+          <!-- This product is not for use by or sale to persons under the age of 18. This product should be used only as directed on the
+        label. It should not be used if you are pregnant or nursing. Consult with a physician before use if you have a serious
+        medical condition or use prescription medications. A Doctor's advice should be sought before using this and any supplemental
+        dietary product. All trademarks and copyrights are the property of their respective owners and are not affiliated
+        with nor do they endorse this product. These statements have not been evaluated by the FDA. This product is not intended
+        to diagnose, treat, cure or prevent any disease. Individual weight loss results will vary. By using this site you
+        agree to follow the Privacy Policy and all Terms &amp; Conditions printed on this site. Void Where Prohibited By
+        Law. By submitting information on this page, you give consent for us to send promotions via SMS to your phone number
+        provided. Opt out and other detailed information is provided in the Privacy Policy. -->
+
+          <br /><br />
+          Copyright © 2019 {{ S1.name }} . All rights reserved
+        </span>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var cbUtilConfig = { disable_non_english_char_input: false };
+    </script>
+    <script>
+      var input_mask_data = {
+        enable_masking: true,
+        masking_device: ["desktop", "mobile"],
+        credit_card_place_holder_active: true,
+        credit_card_masking_placeholder: "cross",
+        credit_card_masking: "dash_masking",
+        phone_number_masking: "(000) 000-0000"
+      };
+    </script>
+    <script>
+      var event_type = "blur";
+      var autopopulate_by = "zip";
+    </script>
+    <script type="text/javascript">
+      $(function() {
+        $(".partialform").submit(function(e) {
+          $("#busy-spinner").css("display", "flex");
+          sessionStorage.setItem(
+            "firstName",
+            $("input[name='firstName']").val()
+          );
+          sessionStorage.setItem("lastName", $("input[name='lastName']").val());
+          sessionStorage.setItem("email", $("input[name='email']").val());
+          window.location.href = "qualify.html";
+          e.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>

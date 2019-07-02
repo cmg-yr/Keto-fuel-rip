@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Offer" ng-controller="DataController">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{ S2.name }}</title>
+    <meta name="description" content="" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/m/app.css" />
+    <meta name="viewport" content="width=640" />
+    <link rel="stylesheet" href="../css/m/upsell_mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../css/m/footer.css" />
+    <link rel="stylesheet" href="../css/m/modal.css" />
+    <link rel="stylesheet" href="../css/m/app3.css" />
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
+
+    <style type="text/css">
+      .form-error {
+        display: none;
+      }
+      input[type="text"]:focus,
+      input[type="tel"]:focus,
+      input[type="email"]:focus,
+      select:focus {
+        border: 1px solid grey;
+        border-bottom: 1px solid #1e90ff;
+        outline: none;
+      }
+      span.help-block.form-error {
+        display: none;
+      }
+      .has-error input[type="email"],
+      .has-error input[type="text"],
+      .has-error input[type="tel"],
+      .has-error.has-success input#phone_mask,
+      .has-error select {
+        border: 1px solid #ff5e45 !important;
+        background: #fff
+          url("../../trugcn/n/app/mobile/images/icon-validation-bad.html") right
+          center no-repeat !important;
+        background-size: 30px !important;
+      }
+      .has-success input[type="email"],
+      .has-success input[type="text"],
+      .has-success input[type="tel"],
+      .has-success select {
+        background: #fff
+          url("../../trugcn/n/app/mobile/images/icon-validation-good.html")
+          right center no-repeat !important;
+        background-size: 30px !important;
+      }
+      div.ib.bottle-wrap {
+        background: url("../images/s2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 210px;
+        height: 265px;
+        position: relative;
+        top: 10px;
+        left: 10px;
+      }
+      div#eshipwrap {
+        position: relative;
+        display: inline-block;
+        margin: 17px auto 0;
+        padding: 0;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+      }
+      div#esicon,
+      div#escopy {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0;
+      }
+      div#esicon {
+        top: -4px;
+      }
+      div#eshipwrap img {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100px;
+        display: inline-block;
+      }
+      div#eshipwrap p {
+        font-size: 12px;
+        margin: 0 auto;
+        width: 65%;
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <!--Maestro-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://bridge-middletier.xyz/dist/v1/bridge.min.css"
+    />
+    <script
+      id="bridge-controller"
+      src="https://bridge-middletier.xyz/dist/v1/bridge.min.js"
+      data-url="lkjasodialp.herokuapp.com"
+    ></script>
+    <!--End of Maestro-->
+    <script src="../js/controllers/DataController.js"></script>
+  </head>
+  <body class="upsellPg">
+    <div id="thankyou-wrap" class="page-wrap retryWrap">
+      <div class="sections section-1">
+        <div class="content">
+          <div class="top-header">
+            <div class="steps-wrap">
+              <div class="bar">
+                <div class="circle-wrap left">
+                  <div class="circle active"><span>1</span></div>
+                </div>
+                <div class="circle-wrap middle">
+                  <div class="circle active"><span>2</span></div>
+                </div>
+                <div class="circle-wrap right">
+                  <div class="circle "><span>3</span></div>
+                </div>
+              </div>
+              <div
+                class="bar"
+                style="background:#ff5e00;margin:initial;left:17%;position:relative;top:-9px;width:195px;;"
+              ></div>
+              <div class="step-name">
+                <div class="steps step-1 active">Shipping Info</div>
+                <div class="steps step-2 active">Finish Order</div>
+                <div class="steps step-3 ">Summary</div>
+              </div>
+            </div>
+            <div class="header"><span>Thank you for your purchase!</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="sections section-2">
+        <div class="content">
+          <div class="top-header">
+            <div class="header">Wait! Your Order <br />Is Not Complete!</div>
+            <div class="sub-header">
+              Customers that purchased {{ S1.name }} <br />have also purchased
+              {{ S2.name }}.
+            </div>
+          </div>
+          <div class="form-wrap">
+            <form id="UpsellForm">
+              <input type="hidden" name="nextPage" value="../receipt.html" />
+              <input type="hidden" name="productCode" value="upsell" />
+              <div
+                class="coupon submitbutton"
+                onclick="$('#kformSubmit').click();"
+              >
+                <div class="ib bottle-wrap"></div>
+                <div class="bottle-info ib">
+                  <p class="line-1">Limited Offer - 10 Remaining</p>
+                  <p class="line-2">MAXIMIZE YOUR RESULTS</p>
+                  <p class="line-3"><span>with</span><br />{{ S2.name }}</p>
+                  <p class="line-4">
+                    Add a <span>risk-free trial</span> bottle<br />Just pay
+                    shipping of
+                  </p>
+                  <p class="line-5">
+                    {{ S2.pricing.shipping.noDiscount | currency }}
+                  </p>
+                </div>
+              </div>
+              <div class="scissors-wrap">
+                <img
+                  src="../images/m/Scissor-Stencil.png"
+                  alt=""
+                  class="scissors"
+                />
+              </div>
+              <center>
+                <input
+                  type="image"
+                  class="pulse"
+                  id="kformSubmit"
+                  alt="COMPLETE CHECKOUT"
+                  src="../images/d/upsell_button.png"
+                />
+              </center>
+            </form>
+          </div>
+          <div class="footer-wrap">
+            <h1 class="privacy">We Care About Your Privacy</h1>
+            <img src="../images/m/secure.png" alt="" class="secure" />
+            <div style="text-align:center;">
+              <a href="../receipt.html" class="nty-link nothanks"
+                >No thank you, I don't want to lose weight faster</a
+              >
+            </div>
+            <div class="footer">
+              <div class="footerlinkwrap tac">
+                <div class="footer">
+                  <p class="footerlinks">
+                    <a href="../terms2.html" class="title-footer bridge-modal"
+                      >Terms &amp; Conditions</a
+                    >
+                    &nbsp;|&nbsp;
+                    <a href="../privacy.html" class="title-footer bridge-modal"
+                      >Privacy Policy</a
+                    >
+                    &nbsp;|&nbsp;
+                    <a href="../contact.html" class="title-footer bridge-modal"
+                      >Contact Us</a
+                    >
+                    &nbsp; &nbsp;
+                  </p>
+                  <br />
+
+                  <br />
+                  <br />
+                  <p class="customerservice">
+                    REPRESENTATIONS REGARDING THE EFFICACY AND SAFETY OF
+                    {{ S2.name }} HAVE NOT BEEN EVALUATED BY THE FOOD AND DRUG
+                    ADMINISTRATION. THE FDA ONLY EVALUATES FOODS AND DRUGS, NOT
+                    SUPPLEMENTS LIKE THESE PRODUCTS. THESE PRODUCTS ARE NOT
+                    INTENDED TO DIAGNOSE, PREVENT, TREAT, OR CURE ANY DISEASE.
+                    <a
+                      href="../garc-study.pdf"
+                      class="bridge-modal"
+                      style="color:#277098;"
+                      >CLICK HERE</a
+                    >
+                    OR
+                    <a
+                      href="../garc-study2.pdf"
+                      class="bridge-modal"
+                      style="color:#277098;"
+                      >CLICK HERE</a
+                    >
+                    TO FIND EVIDENCE OF A TEST, ANALYSIS, RESEARCH, OR STUDY
+                    DESCRIBING THE BENEFITS, PERFORMANCE OR EFFICACY OF BASED ON
+                    THE EXPERTISE OF RELEVANT PROFESSIONALS.
+                  </p>
+                  <br />
+                  <br />
+                  <p class="copyright">
+                    © 2019 {{ S1.name }} — All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <p class="customerservice" style="color: grey;text-align:center;">
+              By placing an order of {{ S2.name }} you will be charged $87.99
+              after your 15 day trial, and then you will be charged every 30
+              days thereafter (Day 45, Day 75 etc) until you call our friendly
+              customer service at: 1-866-436-5490 to cancel your subscription.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span id="verifySaleSpan" style="display:none;margin:auto;text-align:center"
+      >-</span
+    >
+    <div class="modal softModal">
+      <div class="modal-inner soft-modal-inner">
+        <a data-modal-close="">×</a>
+        <div class="modal-content soft-modal-content"></div>
+      </div>
+    </div>
+    <div id="vmodal" style="display:none"></div>
+  </body>
+</html>

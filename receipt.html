@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html ng-app="Offer" ng-controller="DataController">
+  <head>
+    <title ng-bind="S1.name"></title>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="icon" type="image/png" href="images/s1.png" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="css/receiptnew.css" media="all"> -->
+    <!--Maestro-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://bridge-middletier.xyz/dist/v1/bridge.min.css"
+    />
+    <script
+      id="bridge-controller"
+      src="https://bridge-middletier.xyz/dist/v1/bridge.min.js"
+      data-url="lkjasodialp.herokuapp.com"
+    ></script>
+    <style type="text/css">
+      body {
+        background-color: #f1f5f9;
+        color: #535f87;
+      }
+      h1 {
+        font-size: 33px;
+      }
+      .receipt {
+        background-color: #fff;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: 700px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      #rthanks {
+        color: #35365a;
+      }
+      #processed p {
+        color: #8797a7;
+      }
+      .thanks {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .description.totals,
+      .ship-details .label-ship {
+        color: #8797a7;
+        font-weight: 700;
+      }
+      .rprice,
+      .ship-details .info {
+        font-weight: 700;
+        font-size: 17px;
+        margin-bottom: 20px;
+      }
+      .description.totals {
+        margin-bottom: 0;
+        font-size: 18px;
+        width: 365px;
+        float: left;
+      }
+      .rprice {
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      .products {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      #orderId-1,
+      #orderId-2,
+      .description {
+        font-weight: 700;
+      }
+      #step-2 {
+        margin-top: 20px;
+      }
+      .subtotal-1 div,
+      .subtotal-2 div {
+        background-color: #f6f9fc;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .ship-details {
+        text-align: center;
+      }
+      .bottlewrap {
+        display: flex;
+        justify-content: center;
+      }
+      @media only screen and (max-width: 991.5px) {
+        .ship-details {
+          text-align: left;
+        }
+        .details_container {
+          text-align: center;
+        }
+        .description.totals {
+          width: 205px;
+          float: initial;
+        }
+        .receipt {
+          padding: 40px;
+          margin: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function getDate(days) {
+        var dayNames = new Array(
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        );
+        var monthNames = new Array(
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
+        );
+        var now = new Date();
+        now.setDate(now.getDate() + days);
+        var nowString =
+          monthNames[now.getMonth()] +
+          " " +
+          now.getDate() +
+          ", " +
+          now.getFullYear();
+        document.write(nowString);
+      }
+    </script>
+
+    <div class="container receipt">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="thanks">
+            <h1 id="rthanks" class="tac">THANK YOU</h1>
+            <div id="processed" class="tac">
+              <p class="m0">
+                Your orders are being processed and will ship promptly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row ship-details">
+        <div class="col-sm-12 col-md-4">
+          <div class="label-ship">TOTAL AMOUNT</div>
+          <div class="info subtotal-1">
+            {{ S1.pricing.shipping.noDiscount | currency }}
+          </div>
+          <div class="info subtotal-2">
+            {{
+              S1.pricing.shipping.noDiscount + S2.pricing.shipping.noDiscount
+                | currency
+            }}
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="label-ship">ORDER PLACED</div>
+          <div class="info">
+            <script type="text/javascript">
+              getDate(0);
+            </script>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+          <div class="label-ship">SHIPPED TO</div>
+          <div class="info" id="customer-name"></div>
+        </div>
+
+        <div class="col-sm-12 col-md-12">
+          <div class="label-ship">SHIPPING ADDRESS</div>
+          <div class="info" id="customer-address"></div>
+        </div>
+
+        <div class="col-sm-12 col-md-12">
+          <button
+            class="btn btn-primary btn-block"
+            onclick="PrintElem('.receipt')"
+          >
+            [ Print this Receipt ]
+          </button>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="row" id="step-1">
+          <div class="col-md-4 col-md-offset-2">
+            <div class="ib bottlewrap">
+              <div class="imagebox">
+                <img
+                  src="images/s1.png"
+                  style="max-width: 200px; max-height: 200px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="details_container">
+              <p class="description">{{ S1.name }}</p>
+              <p class="details" id="orderId-1"></p>
+              <p class="details">Customer Support: {{ data.phone }}</p>
+              <p class="details">{{ data.rebill.autoShip }} Day Supply</p>
+              <p class="details">Product Cost: $0.00</p>
+              <p class="details">
+                Shipping Cost: {{ S1.pricing.shipping.noDiscount | currency }}
+              </p>
+              <p class="details">
+                Trial Period: {{ data.rebill.trialLength.total }} days
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" id="step-2">
+          <div class="col-md-4 col-md-offset-2">
+            <div class="ib bottlewrap">
+              <div class="imagebox">
+                <img
+                  src="images/s2.png"
+                  style="max-width: 200px; max-height: 200px"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="details_container">
+              <p class="description">{{ S2.name }}</p>
+              <p class="details" id="orderId-2"></p>
+              <p class="details">Customer Support: {{ data.phones2 }}</p>
+              <p class="details">{{ data.rebill.autoShip }} Day Supply</p>
+              <p class="details">Product Cost: $0.00</p>
+              <p class="details">
+                Shipping Cost: {{ S2.pricing.shipping.noDiscount | currency }}
+              </p>
+              <p class="details">
+                Trial Period: {{ data.rebill.trialLength.totals2 }} days
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row subtotal-1">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <p class="description totals">Item(s) Subtotal:</p>
+          <p class="rprice totals"></p>
+          <p class="description totals">Shipping & Handling:</p>
+          <p class="rprice totals">
+            {{ S1.pricing.shipping.noDiscount | currency }}
+          </p>
+          <p class="description totals">Total Amount:</p>
+          <p class="rprice totals">
+            {{ S1.pricing.shipping.noDiscount | currency }}
+          </p>
+        </div>
+      </div>
+
+      <div class="row subtotal-2">
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+          <p class="description totals">Item(s) Subtotal:</p>
+          <p class="rprice totals">$0.00</p>
+          <p class="description totals">Shipping & Handling:</p>
+          <p class="rprice totals">
+            {{
+              S1.pricing.shipping.noDiscount + S2.pricing.shipping.noDiscount
+                | currency
+            }}
+          </p>
+          <p class="description totals">Total Amount:</p>
+          <p class="rprice totals">
+            {{
+              S1.pricing.shipping.noDiscount + S2.pricing.shipping.noDiscount
+                | currency
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/controllers/DataController.js"></script>
+    <script>
+      const customer = GetUserInfo();
+      const customerName = `${customer.firstName} ${customer.lastName}`;
+      const customerAddress = `${customer.address1}, ${customer.city}, ${
+        customer.state
+      } ${customer.zip}`;
+      $("#customer-name").text(customerName);
+      $("#customer-address").text(customerAddress);
+
+      const orders = JSON.parse(sessionStorage.getItem("orders"));
+
+      if (!orders || orders.length === 0) {
+        $("body").html(
+          '<center><h2 style="color: red">Error: no orders found</h2></center>'
+        );
+      } else {
+        $("#orderId-1").text("Order #: " + orders[0]);
+        if (orders.length === 1) {
+          $("#step-2").hide();
+          $(".subtotal-2").hide();
+        } else {
+          $(".subtotal-1").hide();
+          console.log("asd");
+          $("#orderId-2").text("Order #: " + orders[1]);
+        }
+      }
+    </script>
+    <!--<script type="text/javascript">-->
+    <!--    (function(key, objname, api, reqtype, debug) {-->
+    <!--        window["sa_analytics"] = objname;-->
+    <!--        window[objname] = window[objname] || function() {-->
+    <!--            (window[objname].tracker = window[objname].tracker || []).push(arguments)-->
+    <!--        };-->
+    <!--        window[objname].start = (new Date).getTime();-->
+    <!--        window[objname].key = key;-->
+    <!--        window[objname].reqtype = reqtype;-->
+
+    <!--        window[objname].debug = debug;-->
+    <!--        window[objname].api = api;-->
+    <!--        var script = document.createElement("script");-->
+    <!--        var scripts = document.getElementsByTagName("script")[0];-->
+    <!--        script.async = 1;-->
+
+    <!--        script.src = "https://s3.amazonaws.com/saanalytics-scripts-prod/sa_analytics.min.js";-->
+    <!--        scripts.parentNode.insertBefore(script, scripts)-->
+    <!--    })-->
+
+    <!--    ("j9gg6QLbSz9N2BUU5gFV3acc0ASCrCOa4kDlzL1Z", "saa", "https://cw4bdkdff8.execute-api.us-east-1.amazonaws.com/prod/analytics", "pixel", false);-->
+    <!--    saa("set", "company_crm_id", 342)-->
+    <!--    saa("set", "campaign_id", sessionStorage.getItem('campaignId'));-->
+    <!--    saa("goal", "conversion")-->
+    <!--    console.log(sessionStorage.getItem('campaignId'))-->
+    <!--</script>-->
+    <script type="text/javascript">
+      function PrintElem(elem) {
+        Popup($(elem).html());
+      }
+
+      function Popup(data) {
+        var mywindow = window.open("", "new div", "height=400,width=600");
+        mywindow.document.write("<html><head><title>my div</title>");
+        mywindow.document.write(
+          '<link rel="stylesheet" type="text/css" href="css/receiptnew.css" media="all">'
+        );
+        mywindow.document.write("</head><body >");
+        mywindow.document.write(data);
+        mywindow.document.write("</body></html>");
+        mywindow.print();
+        mywindow.close();
+        return true;
+      }
+    </script>
+  </body>
+</html>

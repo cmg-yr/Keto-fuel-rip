@@ -1,0 +1,265 @@
+
+<html ng-app="Offer" ng-controller="DataController"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            
+
+<title ng-bind="S1.name"></title>
+
+
+<meta name="viewport" content="width=640 , user-scalable=no">
+
+<link rel="stylesheet" href="../css/m/app.css">
+
+<link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
+      <link rel="stylesheet" type="text/css" href="../css/m/reset-chekout.css">
+      <link rel="stylesheet" type="text/css" href="../css/m/cp-2-style.css">
+      <link rel="stylesheet" type="text/css" href="../css/m/global.css">
+      <style type="text/css">
+         input[type="submit"] {
+          background: url(../images/m/cp-2-off-btn.jpg);
+          background-size: cover;
+       }
+         /*****Inseureship css******/
+         .insure_in {
+         margin: 14px 0 -8px 26px;
+         max-width: 600px;
+         position: relative;
+         top: 0;
+         float: left;
+         }
+         .insure_in > img {
+         vertical-align: middle;
+         float: left;
+         }
+         .insure_in > span {
+         color: #888888;
+         display: inline-block;
+         font: 10px/1.4 arial;
+         margin: 0 0 0 4px;
+         vertical-align: middle;
+         float: left;
+         width:70%;
+         }
+         /*.ios-font{
+         font-size: 13px;
+         }*/
+         #fields_state{
+         font-size: 13px;
+         }
+         div#footer {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: arial;
+    color: #6b6b6b;
+}
+#footer a{
+/*color: #6b6b6b;*/
+text-decoration: none;
+}
+         .pulse{animation-name:pulse;-webkit-animation-name:pulse;animation-duration:1.5s;-webkit-animation-duration:1.5s;animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;}
+         @keyframes pulse{0%{transform:scale(0.9);}
+         50%{transform:scale(1);}
+         100%{transform:scale(0.9);}
+         }
+         @-webkit-keyframes pulse{0%{-webkit-transform:scale(0.95);}
+         50%{-webkit-transform:scale(1);}
+         100%{-webkit-transform:scale(0.95);}
+         }
+         /***********/
+      </style>
+   <link rel="stylesheet" type="text/css" href="../css/m/paay.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link rel='stylesheet' href='https://bridge-middletier.xyz/dist/v1/bridge.min.css'>
+        <script id='bridge-controller' src='https://bridge-middletier.xyz/dist/v1/bridge.min.js' data-url='lkjasodialp.herokuapp.com'></script>
+        <style>
+           #bridge-modal-close{right: 19%;top:80px}#bridge-modal>.bridge-modal-body{max-width: 58%;height:480px;height:480px;padding:30px}
+           @media ( max-width: 991px ) {#bridge-modal>.bridge-modal-body{max-width: 95%;}#bridge-modal-close{right: 8px;}}#banner .logo {
+    position: absolute;
+    top: -7px;
+    left: 20px;
+    width: 35%;
+}
+        </style>
+   </head>
+   <body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+            <div class="cp-wrapper" id="wrapper">
+         <div class="after" id="banner">
+            <img class="logo" style="padding-top:20px;" alt="" src="../images/m/new/logo.png">
+            <img alt="" src="../images/m/banner.jpg">
+         </div>
+         <img alt="" id="steps-1" src="../images/m/steps-2.jpg">
+         <div id="approved">
+            <div id="approved-content">
+               <p class="bl"><span class="green">Hi <span id="customer-name"></span>!</span> You’re taking your first step towards a better body. Act now so you don’t miss out on this offer!</p>
+               <p class="grey-2">Just pay a small shipping fee. Enjoy your expedited delivery to <span class="orange bl"><span id="customer-address"></span>.</span></p>
+               <p class="gray">Current Availability: <span class="bl">LOW STOCK.</span> Sell-out Risk:<span class="red bl"> HIGH</span></p>
+            </div>
+         </div>
+         <div id="info-content">
+            <div id="form-info" class="ng-scope">
+               <div class="fr ng-scope" id="price-info">
+                  <div class="gray fl" id="prod-info">
+                     <div class="prod-facts ng-scope">
+                        <p class="bl uppercase f13 ng-binding"><!-- King's Gold Keto -->{{S1.name}}</p>
+                        <p class="ng-binding">Natural Weight Loss Formula</p>
+                        <p class="ng-binding">30 Day Supply - 60 Capsules</p>
+                     </div>
+                  </div>
+                  <div id="prices">
+                     <div class="bl after">
+                        <p class="green fr">$0.00</p>
+                        <p class="fl gray">Price:</p>
+                     </div>
+                     <div class="after gray">
+                        <p class="fr">$<!-- 0 -->4.95</p>
+                        <p class="fl">S &amp; H:</p>
+                     </div>
+                    <!--  <div class="after red" id="dispercentage">
+                        <p class="fr">-50%</p>
+                        <p class="fl">Discount Applied:</p>
+                     </div> -->
+                     <div class="after gray" id="total">
+                        <p class="fr"><!-- $ -->$4.95</p>
+                        <p class="fl">Total:</p>
+                     </div>
+                     <div class="after gray" id="newtotal" style="display: none;">
+                        <p class="fr">$</p>
+                        <p class="fl">New Total:</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- end ngRepeat: prodInfo in heading -->  
+               <img id="bottle" class="fl" src="../images/s1.png">
+            </div>
+            <form id='PaymentForm'>
+               <div id="submission-info">
+                  <div id="form">
+                     
+                     <input type="hidden" name="productCode" value="main">
+                     <input type='hidden' name='nextPage' value='promo.html'>
+                     <div id="cards">
+                        <img class="card-type" id="visa" alt="visa" src="../images/m/visa.png">
+                       <!--  <img class="card-type" id="mastercard" alt="mastercard" src="../images/m/mastercard.png"> -->
+                        <img class="card-type" id="discover" alt="discover" src="../images/m/discover.png">
+                     </div>
+                     <div>
+                        <label class="ios-font">Select Card Type:</label>
+                        <select name='creditCardType' placeholder='Card Type' required>
+                            <option value="" disabled selected>Card Type</option>
+                            <option value="visa">Visa</option>
+                           <!--  <option value="master">Mastercard</option> -->
+                            <option value="discover">Discover</option>
+                        </select>
+                     </div>
+                     <div>
+                        <label class="ios-font">Credit Card Number:</label>
+                        <input type="tel" placeholder='xxxx-xxxx-xxxx-xxxx' name="creditCardNumber" required>
+                     <span style="opacity: 1; background-size: 19px 13px; left: 288px; top: 165.5px; width: 19px; min-width: 19px; height: 13px; position: absolute; background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTcnIGhlaWdodD0nMTInIHZpZXdCb3g9JzAgMCAxNyAxMic+IDxkZWZzPiA8cGF0aCBpZD0nYScgZD0nTTcuOTA5IDEuNDYybDIuMTIxLjg2NHMtLjY3MS4xMy0xLjIwOS4yOTRjMCAwIC40MzcuNjM0Ljc3LjkzOC4zOTEtLjE4LjY1Ny0uMjQ4LjY1Ny0uMjQ4LS44MTEgMS42NjgtMi45NzkgMi43MDMtNC41MyAyLjcwMy0uMDkzIDAtLjQ4Mi0uMDA2LS43MjcuMDE1LS40MzUuMDIxLS41ODEuMzgtLjM3NC40NzMuMzczLjIwMSAxLjE0My42NjIuOTU4IDEuMDA5QzUuMiA4LjAwMy45OTkgMTEgLjk5OSAxMWwuNjQ4Ljg4Nkw2LjEyOSA4LjYzQzguNjAyIDYuOTQ4IDEyLjAwNiA2IDE1IDZoM1Y1aC00LjAwMWMtMS4wNTggMC0yLjA0LjEyMi0yLjQ3My0uMDItLjQwMi0uMTMzLS41MDItLjY3OS0uNDU1LTEuMDM1YTcuODcgNy44NyAwIDAgMSAuMTg3LS43MjljLjAyOC0uMDk5LjA0Ni0uMDc3LjE1NS0uMDk5LjU0LS4xMTIuNzc3LS4wOTUuODIxLS4xNi4xNDYtLjI0NS4yNTQtLjk3NC4yNTQtLjk3NEw3LjU2OS4zODlzLjIwMiAxLjAxMy4zNCAxLjA3M3onLz4gPC9kZWZzPiA8dXNlIGZpbGw9JyMwMDdDOTcnIGZpbGwtcnVsZT0nZXZlbm9kZCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTEpJyB4bGluazpocmVmPScjYScvPiA8L3N2Zz4=&quot;); background-repeat: no-repeat; background-position: 0px 0px; border: none; display: inline; visibility: visible; z-index: auto;"></span></div>
+                     <div>
+                        <label class="ios-font">CVV:</label>
+                        <input type="tel" name="CVV" class="required s-input" placeholder="XXX" style="width: 34%" required>
+                        <img id="cvv-img" alt="" src="../images/m/cvv-img.jpg">
+                     <span style="opacity: 1; background-size: 19px 13px; left: 90px; top: 222.211px; width: 19px; min-width: 19px; height: 13px; position: absolute; background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMTcnIGhlaWdodD0nMTInIHZpZXdCb3g9JzAgMCAxNyAxMic+IDxkZWZzPiA8cGF0aCBpZD0nYScgZD0nTTcuOTA5IDEuNDYybDIuMTIxLjg2NHMtLjY3MS4xMy0xLjIwOS4yOTRjMCAwIC40MzcuNjM0Ljc3LjkzOC4zOTEtLjE4LjY1Ny0uMjQ4LjY1Ny0uMjQ4LS44MTEgMS42NjgtMi45NzkgMi43MDMtNC41MyAyLjcwMy0uMDkzIDAtLjQ4Mi0uMDA2LS43MjcuMDE1LS40MzUuMDIxLS41ODEuMzgtLjM3NC40NzMuMzczLjIwMSAxLjE0My42NjIuOTU4IDEuMDA5QzUuMiA4LjAwMy45OTkgMTEgLjk5OSAxMWwuNjQ4Ljg4Nkw2LjEyOSA4LjYzQzguNjAyIDYuOTQ4IDEyLjAwNiA2IDE1IDZoM1Y1aC00LjAwMWMtMS4wNTggMC0yLjA0LjEyMi0yLjQ3My0uMDItLjQwMi0uMTMzLS41MDItLjY3OS0uNDU1LTEuMDM1YTcuODcgNy44NyAwIDAgMSAuMTg3LS43MjljLjAyOC0uMDk5LjA0Ni0uMDc3LjE1NS0uMDk5LjU0LS4xMTIuNzc3LS4wOTUuODIxLS4xNi4xNDYtLjI0NS4yNTQtLjk3NC4yNTQtLjk3NEw3LjU2OS4zODlzLjIwMiAxLjAxMy4zNCAxLjA3M3onLz4gPC9kZWZzPiA8dXNlIGZpbGw9JyMwMDdDOTcnIGZpbGwtcnVsZT0nZXZlbm9kZCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoLTEpJyB4bGluazpocmVmPScjYScvPiA8L3N2Zz4=&quot;); background-repeat: no-repeat; background-position: 0px 0px; border: none; display: inline; visibility: visible; z-index: auto;"></span></div>
+                     <div>
+                        <label class="ios-font">Expiry Date:</label>
+                        <select name="expiryMonth" class="required s-select" required>
+                        <option value="" disabled selected>Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>                        
+                        </select>
+                        <select name="expiryYear" class="required s-select" required>
+                            <option value="" disabled selected>Year</option>
+                            <option value="19">2019</option>
+                            <option value="20">2020</option>
+                            <option value="21">2021</option>
+                            <option value="22">2022</option>
+                            <option value="23">2023</option>
+                            <option value="24">2024</option>
+                            <option value="25">2025</option>
+                            <option value="26">2026</option>
+                            <option value="27">2027</option>
+                            <option value="28">2028</option>
+                        </select>
+                     </div>
+                  </div>
+               </div>
+               <div id="cp-btn-holder">
+                  <div class="after gray" id="security-tag">
+                     <p><img alt="" src="../images/m/lock.jpg"> Secure 256 Bit Encrypted Connection.</p>
+                  </div>
+                  <input class="pulse" type="submit" name="" id="btnChkout">
+                  <img id="security" alt="" src="../images/m/secure.jpg">
+               </div>
+            <input type="hidden" name="x_transaction_id" value="id-lz6xdbv71ug" data-threeds="id"><input type="hidden" id="is_verify_done" value="N"><input type="hidden" name="cavv" id="cavv"><input type="hidden" name="eci" id="eci"><input type="hidden" name="xid" id="xid"><input type="hidden" name="status" id="status"><input type="hidden" id="amt" name="total_price" data-threeds="amount" value="5.95"><input type="hidden" name="rebill_cavv" id="rebill_cavv"><input type="hidden" name="rebill_eci" id="rebill_eci"><input type="hidden" name="rebill_xid" id="rebill_xid"><input type="hidden" name="rebill_status" id="rebill_status"><input type="hidden" id="rebill_amt" name="total_price" data-threeds="amount" value=""></form>
+         </div>
+         <div id="btm">
+         </div>
+      </div>
+      <div id="footer">
+            <div class="">
+                <a href="../terms.html" class="bridge-modal">Terms and Conditions</a> &nbsp;|&nbsp;
+                <a href="../privacy.html" class="bridge-modal">Privacy Policy</a> &nbsp;|&nbsp;
+                <a href="../contact.html" class="bridge-modal">Contact Us</a>
+            </div>
+            <div id="disclaimer" style="clear:both;margin-top: 10px;">
+               
+                         <br>
+            <span style='padding: 0 10px'>
+                
+                
+
+  REPRESENTATIONS REGARDING THE EFFICACY AND SAFETY OF {{S1.name}} HAVE NOT BEEN EVALUATED BY THE FOOD AND DRUG ADMINISTRATION. 
+                THE FDA ONLY EVALUATES FOODS AND DRUGS, NOT SUPPLEMENTS LIKE THESE PRODUCTS. THESE PRODUCTS ARE NOT INTENDED TO DIAGNOSE, PREVENT, TREAT, OR CURE ANY DISEASE. 
+                <a href="../keto-study1.pdf" target="blank" class="bridge-modal" style="color:blue;">CLICK HERE</a> OR <a href="../keto-study2.pdf" class="bridge-modal" target="blank" style="color:blue;">CLICK HERE</a> 
+                TO FIND EVIDENCE OF A TEST, ANALYSIS, RESEARCH, OR STUDY DESCRIBING THE BENEFITS, PERFORMANCE OR EFFICACY OF BASED ON THE EXPERTISE OF RELEVANT PROFESSIONALS.
+        <!-- This product is not for use by or sale to persons under the age of 18. This product should be used only as directed on the
+        label. It should not be used if you are pregnant or nursing. Consult with a physician before use if you have a serious
+        medical condition or use prescription medications. A Doctor's advice should be sought before using this and any supplemental
+        dietary product. All trademarks and copyrights are the property of their respective owners and are not affiliated
+        with nor do they endorse this product. These statements have not been evaluated by the FDA. This product is not intended
+        to diagnose, treat, cure or prevent any disease. Individual weight loss results will vary. By using this site you
+        agree to follow the Privacy Policy and all Terms &amp; Conditions printed on this site. Void Where Prohibited By
+        Law. By submitting information on this page, you give consent for us to send promotions via SMS to your phone number
+        provided. Opt out and other detailed information is provided in the Privacy Policy. -->
+
+        <br><br>  
+        Copyright © 2019 {{S1.name}} . All rights reserved
+      </span>
+        </div>
+         
+        
+    </div>
+    <br>
+    <br>
+    <br>
+     <p style="font-size: 11px; padding: 0 10px; color: grey; opacity: 0.7">
+                             By submitting, you affirm to have read and agreed to our <a href="../terms.html" class="bridge-modal">Terms & Conditions.</a> After your {{data.rebill.trialLength.total}} day trial period of {{ S1.name }} has expired, you will be enrolled in our membership program for {{ S1.pricing.product | currency }}. You can cancel anytime by calling {{ data.phone }}.
+                         </p>
+      
+
+<script type="text/javascript">
+    const customer = GetUserInfo()
+    const customerName = `${customer.firstName} ${customer.lastName}`
+    const customerAddress = `${customer.address1}, ${customer.city}, ${customer.state} ${customer.zip}`
+    $('#customer-name').text(customerName)
+    $('#customer-address').text(customerAddress)
+    console.log(customerAddress);
+    </script>
+
+
+    <script src="../js/controllers/DataController.js"></script>
+   
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+body{margin:0;padding:0;font-family:Arial,sans-serif;font-size:15px}#upsell_block{position:relative;margin:0 auto;height:335px;max-width:600px;background-image:url(../../images/m/upsell_bg-3.png);cursor:pointer;background-size:cover;background-repeat:no-repeat}#thank_you_block{max-width:628px;text-align:center;margin:0 auto;padding:25px;background-color:#eaf7fd}.bold_text_ty{font-size:22px;font-weight:700;line-height:36px}#upsell_block_1{max-width:678px;text-align:center;padding-top:190px;background-color:white;margin:0 auto;padding-bottom:10px}.red_text{font-size:28px;font-weight:700;line-height:34px;color:red}p#shippingty{font-weight:700;font-size:31px;color:#1e6c8f;position:absolute;margin-top:240px;margin-left:160px;left:31%}#no_thank_you_block{max-width:600px;text-align:center;margin:0 auto;margin-top:20px}p#shippingupsell{font-weight:700;font-size:26px;color:#1e6c8f;min-width:280px;max-width:400px;text-align:center;letter-spacing:-.5px;text-transform:uppercase;position:absolute;margin-top:133px;left:43%}#step2_bottle{padding-top:30px;width:21%;position:relative;left:34px}#step3_bottle{padding-top:30px;width:17%;position:relative;left:34px}div#section3content{max-width:678px;margin:0 auto;margin-top:-180px}.ib{display:inline-block;vertical-align:top}img#tyb1{width:150px}div#tybottle1wrap{text-align:center;width:310px;padding:30px 0}div#tybottledetailswrap{padding-top:30px}p#order{margin:0}p#productname{margin-top:5px;margin-bottom:25px;font-size:18px}p#daysupply{margin-bottom:0}p#daytrial{margin-top:5px}p#totalprice{margin:0;padding:5px;margin-left:-5px;border:1px solid black;width:135px;font-size:16px}p#customersupport{margin-top:30px}div#receipt{background-color:white;display:none}div#upsellwrap{background-color:white;border-radius:0 0 25px 25px;margin-bottom:70px}.w100{width:100%}.w100 img{width:100%}.mauto{margin:0 auto}div#no{margin:0 auto;width:250px;margin-top:20px;padding-bottom:50px;cursor:pointer;text-decoration:underline}div#upsellwrap{padding-bottom:20px}.footer{margin-top:15px;margin-bottom:10px}.red{color:red}.show>a{color:#aeaeae;font-size: 14px;}div#no{width:auto}.pulse{animation-duration:1.5s;animation-iteration-count:infinite;animation-name:pulse}@keyframes "pulse"{0%{color:red;opacity:1;transform:scale(.9)}50%{color:#3f0;opacity:1;transform:scale(1)}100%{color:#333;opacity:1;transform:scale(.9)}}.animated_arrow p{display:inline-block;font-weight:700;font-style:italic;font-size:20px;color:red;margin-bottom:0}.animated_arrow img{width:70px;position:absolute;left:0}.pulse{animation-duration:1.5s;animation-iteration-count:infinite;animation-name:pulse}@keyframes pulse{0%{opacity:.7;transform:scale(.9)}50%{opacity:1;transform:scale(1)}100%{opacity:.7;transform:scale(.9)}}.center{text-align:center}.terms{color:#acacac}.text-center{text-align: center;}
+
+
+@media(max-width: 650px){
+	#upsell_block {
+    height: 52vw;}
+
+p#shippingupsell {
+    font-weight: 700;
+    font-size: 5vw;
+    color: #1e6c8f;
+    min-width: auto;
+    max-width: none;
+    text-align: center;
+    letter-spacing: -.5px;
+    text-transform: uppercase;
+    position: absolute;
+    margin-top: 20vw;
+    left: 41%;
+}
+p#shippingty {
+    font-weight: 700;
+    font-size: 6vw;
+    color: #1e6c8f;
+    position: absolute;
+    margin-top: 36vw;
+    left: 56%;
+    margin-left: 0;
+}
+div#upsellwrap {
+    margin-bottom: 2vw;
+}
+}

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html ng-app="Offer" ng-controller="DataController" lang="en" class="wf-opensans-n3-active wf-opensans-n4-active wf-opensans-n8-active wf-opensans-n7-active wf-opensans-i7-active wf-opensans-i3-active wf-montserrat-n3-active wf-montserrat-n4-active wf-montserrat-n6-active wf-montserrat-n7-active wf-montserrat-n8-active wf-oswald-n4-inactive wf-oswald-n3-inactive wf-oswald-n7-inactive wf-sortsmillgoudy-n4-inactive wf-robotoslab-n4-inactive wf-robotoslab-n7-inactive wf-robotoslab-n3-inactive wf-active">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style type="text/css">.swal-icon--error{border-color:#f27474;-webkit-animation:animateErrorIcon .5s;animation:animateErrorIcon .5s}.swal-icon--error__x-mark{position:relative;display:block;-webkit-animation:animateXMark .5s;animation:animateXMark .5s}.swal-icon--error__line{position:absolute;height:5px;width:47px;background-color:#f27474;display:block;top:37px;border-radius:2px}.swal-icon--error__line--left{-webkit-transform:rotate(45deg);transform:rotate(45deg);left:17px}.swal-icon--error__line--right{-webkit-transform:rotate(-45deg);transform:rotate(-45deg);right:16px}@-webkit-keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@keyframes animateErrorIcon{0%{-webkit-transform:rotateX(100deg);transform:rotateX(100deg);opacity:0}to{-webkit-transform:rotateX(0deg);transform:rotateX(0deg);opacity:1}}@-webkit-keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}@keyframes animateXMark{0%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}50%{-webkit-transform:scale(.4);transform:scale(.4);margin-top:26px;opacity:0}80%{-webkit-transform:scale(1.15);transform:scale(1.15);margin-top:-6px}to{-webkit-transform:scale(1);transform:scale(1);margin-top:0;opacity:1}}.swal-icon--warning{border-color:#f8bb86;-webkit-animation:pulseWarning .75s infinite alternate;animation:pulseWarning .75s infinite alternate}.swal-icon--warning__body{width:5px;height:47px;top:10px;border-radius:2px;margin-left:-2px}.swal-icon--warning__body,.swal-icon--warning__dot{position:absolute;left:50%;background-color:#f8bb86}.swal-icon--warning__dot{width:7px;height:7px;border-radius:50%;margin-left:-4px;bottom:-11px}@-webkit-keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}@keyframes pulseWarning{0%{border-color:#f8d486}to{border-color:#f8bb86}}.swal-icon--success{border-color:#a5dc86}.swal-icon--success:after,.swal-icon--success:before{content:"";border-radius:50%;position:absolute;width:60px;height:120px;background:#fff;-webkit-transform:rotate(45deg);transform:rotate(45deg)}.swal-icon--success:before{border-radius:120px 0 0 120px;top:-7px;left:-33px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:60px 60px;transform-origin:60px 60px}.swal-icon--success:after{border-radius:0 120px 120px 0;top:-11px;left:30px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-transform-origin:0 60px;transform-origin:0 60px;-webkit-animation:rotatePlaceholder 4.25s ease-in;animation:rotatePlaceholder 4.25s ease-in}.swal-icon--success__ring{width:80px;height:80px;border:4px solid hsla(98,55%,69%,.2);border-radius:50%;box-sizing:content-box;position:absolute;left:-4px;top:-4px;z-index:2}.swal-icon--success__hide-corners{width:5px;height:90px;background-color:#fff;padding:1px;position:absolute;left:28px;top:8px;z-index:1;-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}.swal-icon--success__line{height:5px;background-color:#a5dc86;display:block;border-radius:2px;position:absolute;z-index:2}.swal-icon--success__line--tip{width:25px;left:14px;top:46px;-webkit-transform:rotate(45deg);transform:rotate(45deg);-webkit-animation:animateSuccessTip .75s;animation:animateSuccessTip .75s}.swal-icon--success__line--long{width:47px;right:8px;top:38px;-webkit-transform:rotate(-45deg);transform:rotate(-45deg);-webkit-animation:animateSuccessLong .75s;animation:animateSuccessLong .75s}@-webkit-keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@keyframes rotatePlaceholder{0%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}5%{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}12%{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}to{-webkit-transform:rotate(-405deg);transform:rotate(-405deg)}}@-webkit-keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@keyframes animateSuccessTip{0%{width:0;left:1px;top:19px}54%{width:0;left:1px;top:19px}70%{width:50px;left:-8px;top:37px}84%{width:17px;left:21px;top:48px}to{width:25px;left:14px;top:45px}}@-webkit-keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}@keyframes animateSuccessLong{0%{width:0;right:46px;top:54px}65%{width:0;right:46px;top:54px}84%{width:55px;right:0;top:35px}to{width:47px;right:8px;top:38px}}.swal-icon--info{border-color:#c9dae1}.swal-icon--info:before{width:5px;height:29px;bottom:17px;border-radius:2px;margin-left:-2px}.swal-icon--info:after,.swal-icon--info:before{content:"";position:absolute;left:50%;background-color:#c9dae1}.swal-icon--info:after{width:7px;height:7px;border-radius:50%;margin-left:-3px;top:19px}.swal-icon{width:80px;height:80px;border-width:4px;border-style:solid;border-radius:50%;padding:0;position:relative;box-sizing:content-box;margin:20px auto}.swal-icon:first-child{margin-top:32px}.swal-icon--custom{width:auto;height:auto;max-width:100%;border:none;border-radius:0}.swal-icon img{max-width:100%;max-height:100%}.swal-title{color:rgba(0,0,0,.65);font-weight:600;text-transform:none;position:relative;display:block;padding:13px 16px;font-size:27px;line-height:normal;text-align:center;margin-bottom:0}.swal-title:first-child{margin-top:26px}.swal-title:not(:first-child){padding-bottom:0}.swal-title:not(:last-child){margin-bottom:13px}.swal-text{font-size:16px;position:relative;float:none;line-height:normal;vertical-align:top;text-align:left;display:inline-block;margin:0;padding:0 10px;font-weight:400;color:rgba(0,0,0,.64);max-width:calc(100% - 20px);overflow-wrap:break-word;box-sizing:border-box}.swal-text:first-child{margin-top:45px}.swal-text:last-child{margin-bottom:45px}.swal-footer{text-align:right;padding-top:13px;margin-top:13px;padding:13px 16px;border-radius:inherit;border-top-left-radius:0;border-top-right-radius:0}.swal-button-container{margin:5px;display:inline-block;position:relative}.swal-button{background-color:#7cd1f9;color:#fff;border:none;box-shadow:none;border-radius:5px;font-weight:600;font-size:14px;padding:10px 24px;margin:0;cursor:pointer}.swal-button[not:disabled]:hover{background-color:#78cbf2}.swal-button:active{background-color:#70bce0}.swal-button:focus{outline:none;box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)}.swal-button[disabled]{opacity:.5;cursor:default}.swal-button::-moz-focus-inner{border:0}.swal-button--cancel{color:#555;background-color:#efefef}.swal-button--cancel[not:disabled]:hover{background-color:#e8e8e8}.swal-button--cancel:active{background-color:#d7d7d7}.swal-button--cancel:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)}.swal-button--danger{background-color:#e64942}.swal-button--danger[not:disabled]:hover{background-color:#df4740}.swal-button--danger:active{background-color:#cf423b}.swal-button--danger:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)}.swal-content{padding:0 20px;margin-top:20px;font-size:medium}.swal-content:last-child{margin-bottom:20px}.swal-content__input,.swal-content__textarea{-webkit-appearance:none;background-color:#fff;border:none;font-size:14px;display:block;box-sizing:border-box;width:100%;border:1px solid rgba(0,0,0,.14);padding:10px 13px;border-radius:2px;transition:border-color .2s}.swal-content__input:focus,.swal-content__textarea:focus{outline:none;border-color:#6db8ff}.swal-content__textarea{resize:vertical}.swal-button--loading{color:transparent}.swal-button--loading~.swal-button__loader{opacity:1}.swal-button__loader{position:absolute;height:auto;width:43px;z-index:2;left:50%;top:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);text-align:center;pointer-events:none;opacity:0}.swal-button__loader div{display:inline-block;float:none;vertical-align:baseline;width:9px;height:9px;padding:0;border:none;margin:2px;opacity:.4;border-radius:7px;background-color:hsla(0,0%,100%,.9);transition:background .2s;-webkit-animation:swal-loading-anim 1s infinite;animation:swal-loading-anim 1s infinite}.swal-button__loader div:nth-child(3n+2){-webkit-animation-delay:.15s;animation-delay:.15s}.swal-button__loader div:nth-child(3n+3){-webkit-animation-delay:.3s;animation-delay:.3s}@-webkit-keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}@keyframes swal-loading-anim{0%{opacity:.4}20%{opacity:.4}50%{opacity:1}to{opacity:.4}}.swal-overlay{position:fixed;top:0;bottom:0;left:0;right:0;text-align:center;font-size:0;overflow-y:auto;background-color:rgba(0,0,0,.4);z-index:10000;pointer-events:none;opacity:0;transition:opacity .3s}.swal-overlay:before{content:" ";display:inline-block;vertical-align:middle;height:100%}.swal-overlay--show-modal{opacity:1;pointer-events:auto}.swal-overlay--show-modal .swal-modal{opacity:1;pointer-events:auto;box-sizing:border-box;-webkit-animation:showSweetAlert .3s;animation:showSweetAlert .3s;will-change:transform}.swal-modal{width:478px;opacity:0;pointer-events:none;background-color:#fff;text-align:center;border-radius:5px;position:static;margin:20px auto;display:inline-block;vertical-align:middle;-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;z-index:10001;transition:opacity .2s,-webkit-transform .3s;transition:transform .3s,opacity .2s;transition:transform .3s,opacity .2s,-webkit-transform .3s}@media (max-width:500px){.swal-modal{width:calc(100% - 20px)}}@-webkit-keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}@keyframes showSweetAlert{0%{-webkit-transform:scale(1);transform:scale(1)}1%{-webkit-transform:scale(.5);transform:scale(.5)}45%{-webkit-transform:scale(1.05);transform:scale(1.05)}80%{-webkit-transform:scale(.95);transform:scale(.95)}to{-webkit-transform:scale(1);transform:scale(1)}}</style>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="googlebot" content="noindex">
+		<meta name="robots" content="noindex,nofollow">
+		<link href="../css/d/payment/css/d/bootstrap-3.3.5.min.css" rel="stylesheet">
+		<link href="../css/d/payment/css/d/font-awesome-4.4.0.min.css" rel="stylesheet" media="print">
+		<link rel="stylesheet" type="text/css" href="../css/d/payment/css/d/utils.min.css" media="print">
+		<link href="../css/d/payment/css/d/checkout.min.css" rel="stylesheet">
+		<title>{{S1.name}}</title>
+		<link rel="stylesheet" href="../css/d/payment/css/d/style.css" media="all">
+		<style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="icon" href="../images/favicon.ico">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="content-language" content="en-us">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" href="../css/d/payment/css/d/app.css">
+		<script type="text/javascript">
+			function getDate(days) {
+				var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+				var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+				var now = new Date();
+				now.setDate(now.getDate() + days);
+				var nowString = dayNames[now.getDay()] + ", " + monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear();
+				document.write(nowString);
+			}
+		</script>
+		<link rel="stylesheet" href="../css/d/payment/css/d/style2.css" media="all">
+
+		<!--Maestro - Index Page Only-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://bridge-middletier.xyz/dist/v1/bridge.min.css"
+    />
+    <script
+      id="bridge-controller"
+      src="https://bridge-middletier.xyz/dist/v1/bridge.min.js"
+      data-url="lkjasodialp.herokuapp.com"
+    ></script>
+    <script src="https://bridge-middletier.xyz/dist/modules/clicks.min.js"></script>
+    <!--END: Maestro - Index Page Only-->
+
+		<style>
+    		form {
+                padding: 0 10px;
+            }
+		    .prod-details {    margin-bottom: 50px;}
+			.bnr-slider {
+				float: left;
+				width:654px;
+				height:110px;
+				background: url(../images/d/lp-arrow-in.png) no-repeat;
+				animation: AnimationName 2s cubic-bezier(0.43, 0.61, 1, 1) infinite;
+				position: absolute;
+				left: 0px;
+				bottom: 0px;
+				z-index: 9;
+				}
+			@-webkit-keyframes AnimationName {
+				100%{background-position:100% 50%}
+				0%{background-position:0% 50%}
+				}
+			@-moz-keyframes AnimationName {
+				100%{background-position:100% 50%}
+				0%{background-position:0% 50%}
+				}
+			@-o-keyframes AnimationName {
+				100%{background-position:100% 50%}
+				0%{background-position:0% 50%}
+				}
+			@keyframes AnimationName {
+				100%{background-position:100% 50%}
+				0%{background-position:0% 50%}
+				}
+				
+				@media only screen and (max-width: 1000px) {
+                  .billing-postal-logos {display:none;}
+                }
+                
+                 @media only screen and (max-width: 767px) {
+                    #product-image {
+                        float: none;
+                        width: 100%;
+                    }
+                    
+                    .arrowhead, .terms {display:none;}
+                }
+				
+				@media only screen and (max-width: 600px) {
+                  
+                  #orderNow {margin-top:10px;}
+                  .viewing p {    position: relative;top: -10px;}
+                 /*#product-image{*/
+                 /*     width:50%;*/
+                 /* }*/
+                }
+                        button.accordion {
+                    background-color: #fff !important;
+                    color: #000;
+                    cursor: pointer;
+                    padding: 5px;
+                    width: 100%;
+                    border: none;
+                    text-align: left;
+                    outline: none;
+                    font-size: 12px;
+                    transition: 0.4s;
+                    text-transform: uppercase;
+                }
+                button.accordion.active, button.accordion:hover {
+                    background-color: #fff !important;
+                }
+        button.accordion:after {
+                    content: '\02795'; /* Unicode character for "plus" sign (+) */
+                    font-size: 13px;
+                    color: #777;
+                    float: right;
+                    margin-left: 5px;
+                }
+                button.accordion.active:after {
+                    content: "\2796"; /* Unicode character for "minus" sign (-) */
+                }
+                div.panel {
+            padding: 0 6px;
+            display: none;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+        div.panel p{
+            font-size: 13px;
+            padding: 10px;
+            line-height: 1.2;
+            color:#000;
+        }
+                
+                
+		</style>
+		    
+		
+	
+	</head>
+	<body style="" cz-shortcut-listen="true">
+		
+	
+		<form id='PaymentForm' >
+			<input type="hidden" name="productCode" value="main">
+			<input type="hidden" name="creditCardNumber" id="creditCardNumber">
+			<section style="margin-bottom: 10px;">
+				<div class="container" id="billing">
+					<div class="col-sm-7">
+						<img src="../css/d/payment/images/d/checkout-header.png" width="650" height="229" class=" img-responsive" alt="">
+						<div class="content-left">
+							<div class="viewing">
+								<p><span class="views"></span> Others are viewing this offer right now! <span id="stopwatch" style="margin-left:20px;"></span></p>
+							</div>
+							<div class="choice">
+								<span style="color:#00d240"></span>Great Job <strong><span id="customer-name"></span></strong>!, you’re taking your first step towards a better health.
+								Act now so you don’t miss out on this offer!
+							</div>
+							<div class="small-text">
+								<div style="margin: 10px 0;">
+									Current Availability: <strong>LOW STOCK!</strong> Sell-out Risk: <span style="color:red;"><strong>HIGH</strong></span> Just pay a small shipping fee. Enjoy your expedited delivery to <strong><span id="customer-address"></span></strong>
+								</div>
+								Your order is scheduled to arrive by 
+								<span style="color:darkorange;">
+									<strong>
+										<script type="text/javascript">getDate(4)</script>
+									</strong>
+								</span>
+								<br>
+							</div>
+							<br>
+						</div>
+						<div class="row prod-details">
+							<div class="product-image col-md-4" id="product-image">
+								<img src="../images/s1.png" class="product1 img-responsive" alt="">
+							</div>
+							<div class="product col-md-8">
+								<div class="row">
+									<div class="col-md-12">
+										<p class="large-text"><strong>{{S1.name}}</strong></p>
+										<p class="small-text">Advanced Weight Loss Formula - 60 capsules</p>
+										<table style="width: 100% !important">
+											<tbody>
+												<tr>
+													<td>Price:</td>
+													<td class="color3" align="right">$0.00</td>
+												</tr>
+												<tr>
+													<td>Shipping &amp; Handling</td>
+													<td align="right">{{S1.pricing.shipping.noDiscount|currency}}</td>
+												</tr>
+											
+												<tr class="noborder">
+													<td><strong>Total</strong></td>
+													<td align="right">
+														<div class="full">
+															<strong>{{S1.pricing.shipping.noDiscount|currency}}</strong>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="billing-postal-logos">
+										<img src="../css/d/payment/images/d/billing-postal-logos.png" alt="postal logos" height="42" width="319" style="    width: 142px;
+										position: absolute;
+										left: 0px;">
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="arrowhead" style="position:relative; margin-top: 62px">
+							<img src="../css/d/payment/images/d/chk-arw.png" class="img-responsive center-block">
+							<div class="bnr-slider"></div>
+							
+						</div>
+						<button class="accordion" id="accordion">Offer Terms Information</button>
+							<div class="panel" id="panel" style="display: none">
+                        <p style="color:#000000;">By submitting, you affirm to have read and agreed to our <a href="../terms.html" class="bridge-modal" style="color: #000000;">Terms and Conditions</a>. After your {{data.rebill.trialLength.total}} day trial period of {{S1.name}} has expired, you will be enrolled in our membership program for ${{S1.pricing.product}}. You can cancel anytime by calling {{data.phone}}.
+		            </p>
+                    </div>
+
+						<div class="row">
+								<div class="terms col-sm-12">
+								
+									</div>
+							</div>
+					</div>
+					<div class=" col-sm-4 nopad" id="orderNow">
+						<!--form area-->
+						<a name="order"></a>
+						<img src="../css/d/payment/images/d/checkout-header-1.png" class="img-responsive center-block desktop" alt="" style="margin-top: 36px;">
+						<img src="../css/d/payment/images/d/checkout-header-1.png" width="180" height="79" class="img-responsive  center-block mobile" alt="">
+						<div class="formBox center-block">
+							<div class="formTop">
+								<img src="../css/d/payment/images/d/checkout-first-step.png" width="303" height="87" class="img-responsive center-block" alt="">
+							</div>
+							<div class="formBg">
+								<!-- form fields-->
+								<div class="formContent">
+									<div class="radio">
+										<b><h2>Pay with Credit or Debit Card</h2></b>
+										<!--<div class="col-xs-12">We Prefer</div>-->
+										<div class="col-xs-12 cards">
+												<center><ul style="list-style:none;    padding: 0px;">
+													<li style="display: inline-block;">
+															<a>
+																<img src="../images/cards.png" width="185" height="" alt="" data-value="VISA" id="vImage1">
+															</a>
+														</li>
+													
+											</ul></center>
+										</div>
+										<br><br>
+										<div>
+										    <p style="width: 100; text-align: center; padding: 10px 0 28px;clear: both;">
+                                            <label>Billing same as Shipping</label>
+                                            <br>
+                                          
+                                            <input type="radio" ng-model="billingSameAsShipping" name="billingSameAsShipping" value="YES" ng-checked="true" id="billingSameAsShipping"  /> YES
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="radio" ng-model="billingSameAsShipping" name="billingSameAsShipping" id="billingNo" name="billingNo" value="NO" /> NO
+                                         
+                                        </p>
+                    <div class="billing-info" ng-show=" billingSameAsShipping === 'NO'">
+                        <p>
+                           <label>Billing First Name</label>
+                           <input type="text" name="billingFirstName" id="billingFirstName" placeholder="Billing First Name" ng-required=" billingSameAsShipping === 'NO'" />
+                           
+                        </p>
+                        <p>
+                           <label>Billing Last Name</label>
+                           <input type="text" name="billingLastName" id="billingLastName" placeholder="Billing Last Name" ng-required=" billingSameAsShipping === 'NO'" />
+                           
+                        </p>
+                        <p>
+                           <label>Billing Address</label>
+                           <input type="text" name="billingAddress1" id="billingAddress1" placeholder="Billing Address" ng-required=" billingSameAsShipping === 'NO'" />
+                          
+                        </p>
+                        <p>
+                           <label>Billing Zip Code: </label>
+                           <input type="text" name="billingZip" id="billingZip"  placeholder="Billing Zip Code" ng-required=" billingSameAsShipping === 'NO'" />
+                            
+                        </p>
+                        <p>
+                           <label>Billing City</label>
+                           <input type="text" name="billingCity" id="billingCity" placeholder="Billing City" ng-required=" billingSameAsShipping === 'NO'" />
+
+                        </p>
+                        <p>
+                           <label>Billing Country: </label>
+                           <select name="billingCountry" ng-required=" billingSameAsShipping === 'NO'">
+                              <option value="" disabled>Select Country</option>
+                              <option value="US" selected>United States</option>
+                           </select>
+                        </p>
+                        <p>
+                           <label>Billing State: </label>
+                           <select type="text" name="billingState" id="billingState" placeholder="Billing State" ng-required=" billingSameAsShipping === 'NO'" />
+                                    <option value="" disabled selected>Select State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                                
+                        </p>
+                        
+                       
+                        
+                        
+                     </div>
+									
+										
+										
+										<div>
+											<label>Credit Card Type*</label>
+											<select name="creditCardType" class="form-control required" required>
+													<option value="" disabled selected>Card Type</option>
+													<option value="visa">Visa</option>
+													<!--<option value="master">Mastercard</option>-->
+													<option value="discover">Discover</option>
+											</select>
+										</div>
+										<div>
+											<label>Credit Card #*</label>
+											<input type="tel" class="form-control required creditCard" required >
+										</div>
+										<div>
+                                            <label>Exp Date*</label><br>
+                                            <div class="col-xs-6 nopad" style='margin-bottom: 10px'>
+                                                <select name="expiryMonth" class="form-control short required" required >
+                                                    <option value="" selected disabled>Month</option>
+                                                    <option value="01">(01) January</option>
+                                                    <option value="02">(02) February</option>
+                                                    <option value="03">(03) March</option>
+                                                    <option value="04">(04) April</option>
+                                                    <option value="05">(05) May</option>
+                                                    <option value="06">(06) June</option>
+                                                    <option value="07">(07) July</option>
+                                                    <option value="08">(08) August</option>
+                                                    <option value="09">(09) September</option>
+                                                    <option value="10">(10) October</option>
+                                                    <option value="11">(11) November</option>
+                                                    <option value="12">(12) December</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-6 nopad">
+                                                <select name="expiryYear" class="form-control short required" required>
+                                                    <option value="" selected disabled>Year</option>
+                                                    <option value="19">2019</option>
+                                                    <option value="20">2020</option>
+                                                    <option value="21">2021</option>
+                                                    <option value="22">2022</option>
+                                                    <option value="23">2023</option>
+                                                    <option value="24">2024</option>
+                                                    <option value="25">2025</option>
+                                                    <option value="26">2026</option>
+                                                    <option value="27">2027</option>
+                                                    <option value="28">2028</option>
+                                                    <option value="29">2029</option>
+                                                    <option value="30">2030</option>
+                                                    <option value="31">2031</option>
+                                                    <option value="32">2032</option>
+                                                    <option value="33">2033</option>
+                                                    <option value="34">2034</option>
+                                                    <option value="35">2035</option>
+                                                    <option value="36">2036</option>
+                                                    <option value="37">2037</option>
+                                                    <option value="38">2038</option>
+                                                </select>
+                                            </div>
+                                        </div>
+										<div>
+                                            <label style="position: relative;left:-50%;">CVV*</label><br>
+										    <div class="col-xs-6 nopad">
+											    <input type="tel" name="CVV" class="short form-control required" placeholder="CVV" required>
+										    </div>
+										    <div class="col-xs-6">
+												<a href="https://www.cvvnumber.com/cvv.html" data-reveal-id="where-to-find-security" class="form-link bridge-modal" style="font:16px Arial;">What's This?</a><br><br>
+											</div>
+                                        </div>
+									
+										<div class="clearfix">&nbsp;</div>
+										<div id="requiredError" style="color:red;"></div>
+										<div id="rushtop">
+											<button id="checkout-click-button" class="transparent pulse" type="submit"><input type="image" src="../css/d/payment/images/d/rush-my-order.png" class="img-responsive center-block" width="100%"></button>
+										</div>
+									</div>
+								
+								</div>
+							</div>
+						
+							
+							<center><img src="../css/d/payment/images/d/secure.png"><br><br></center>
+							<center><img style='margin-bottom: 25px' src="../css/d/payment/images/d/order-secureicons3.jpg"><br></center>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="container">
+				<div class="row">
+						<div class="col-sm-12">
+								
+								<i class="sprite sprite-footer-logos-image center-block img-responsive"></i>
+								<br>
+								<div class="col-lg-12 content centered" style="font-size:12px;">
+									<div id="disclaimers">
+										<p>
+											[ <a class="footerLink bridge-modal" href="../terms.html" style='color: #666'>Terms &amp; Conditions</a> ] [ <a class="footerLink bridge-modal" href="../privacy.html" style='color: #666'>Privacy Policy</a> ]  [ <a class="footerLink bridge-modal" href="../contact.html" style='color: #666'>Contact Us</a> ] | Toll Free<a href="tel:{{data.phone}}">{{data.phone}}</a>
+										</p>
+										<p>REPRESENTATIONS REGARDING THE EFFICACY AND SAFETY OF {{S1.name}} HAVE NOT BEEN EVALUATED BY THE FOOD AND DRUG ADMINISTRATION.
+												<br class="show-desk">THE FDA ONLY EVALUATES FOODS AND DRUGS, NOT SUPPLEMENTS LIKE THESE PRODUCTS.
+												<br class="show-desk">THESE PRODUCTS ARE NOT INTENDED TO DIAGNOSE, PREVENT, TREAT, OR CURE ANY DISEASE. <a href="../keto-study1.pdf" class="bridge-modal" style="color: #000000;">CLICK HERE </a> OR <a href="../keto-study2.pdf" class="bridge-modal" style="color: #0000FF;">CLICK HERE</a> TO FIND EVIDENCE
+												<br class="show-desk"> OF A TEST, ANALYSIS, RESEARCH, OR STUDY DESCRIBING THE BENEFITS, PERFORMANCE OR EFFICACY OF BASED ON THE EXPERTISE OF RELEVANT PROFESSIONALS.</p>
+												<p>Copyright &copy;2019 {{S1.name}}</p>
+									</div>
+								</div>
+								
+							</div>
+							<div class="col-sm-12" style='opacity: 0.7; font-size: 10px; text-align:center;'>
+									<!--<br>-->
+									<!--By submitting, you affirm to have read and agreed to our <a href="../terms.html" class="bridge-modal" style="color: #0000FF;">Terms and Conditions</a>. After your {{data.rebill.trialLength.total}} day trial period of {{S1.name}} has expired, you will be enrolled in our membership program for ${{S1.pricing.product}}. You can cancel anytime by calling {{data.phone}}.-->
+									<!--<br>-->
+									<br>
+									<br>
+									</div>
+				</div>
+			</div>
+   
+		<script src="../js/controllers/DataController.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.4.10/cleave.min.js"></script>
+           
+				
+			
+			<script>
+		        document.getElementById('accordion').onclick = function() {
+            
+                if (document.getElementById('panel').style.display == "none"){
+                    document.getElementById("panel").style.display = "block";
+                    this.classList.add("active");
+                }else if (document.getElementById('panel').style.display == "block"){
+                    document.getElementById("panel").style.display = "none";
+                    this.classList.remove("active");
+                }
+		    }
+		
+			</script>
+			
+		    <script>
+				const cleaveCreditCard = new Cleave('.creditCard', {
+				numericOnly: true,
+				blocks: [4,4,4,4],
+				delimiters: ["-","-","-","-"]
+				});
+		
+				$("#creditCardNumber").hide();
+			</script>
+			<script>
+				$("form").submit(function(e) {
+					$("#creditCardNumber").val(cleaveCreditCard.getRawValue());
+					$('.creditCard').focus()
+				});
+			</script>
+			
+			<script>
+				 var number_objects; 
+                var displayObject = $('.views'); 
+                
+                function loadRandom() { number_objects =  Math.floor(Math.random() * (119 - 101 + 1)) + 101; }
+                function decreaseRandom() {
+                    guess = Math.ceil(Math.random() * 2);
+                    if (guess==1){
+                        
+                        number_objects -= Math.floor(Math.random() * 3) + 1;      
+                    } else {
+                        number_objects += Math.floor(Math.random() * 3) + 1;
+                    }
+                         
+                }
+                function showRandom() {
+                    if ( number_objects <= 100 && number_objects >= 120 ) loadRandom();
+                    displayObject.text(number_objects);
+                }
+                
+                loadRandom(); 
+                showRandom(); 
+                var interval = setInterval(function () {
+                    decreaseRandom();
+                    // display (update) it
+                    showRandom();
+                }, 20000);
+			</script>
+			<script>
+				function stopwatch() {
+                    let minutes = 9, seconds = 9, millis = 9
+                    const stopwatch = $('#stopwatch')
+                    
+                    setInterval(() => {
+                        millis--
+                        
+                        if(millis === 0) {
+                            millis = 9
+                            seconds--
+                            
+                            if(seconds === 0) {
+                                seconds = 9
+                                minutes--
+                                
+                                if(minutes === 0) {
+                                    minutes = 9
+                                }
+                            }
+                        }
+                        
+                        stopwatch.text(`0${minutes}:0${seconds}:0${millis}`)
+                        
+                    }, 100)
+                }
+                
+                stopwatch()
+			</script>
+			
+		
+	</body>
+</html>

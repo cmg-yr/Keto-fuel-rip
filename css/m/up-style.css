@@ -1,0 +1,88 @@
+body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;}
+
+body#tybody{
+
+	/*background: #fff url(../images/checkout-bg.jpg) no-repeat;*/
+	background: #fff;
+    height: auto;
+    width: 100%;
+    /*background-size: cover;
+    background-position: top center;*/
+}
+
+#ty_wrap #content{/*position:absolute;*/top:-8px;color:black;width:100%;/*height:783px;*/}
+
+img{border:0px;}
+
+.wrap{position:relative;}
+
+
+#ty_wrap{/*background-color:#eafbe3;*/}
+
+
+#ty_wrap #footer {
+    position: relative;
+    top: 46px;
+    left: 0px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #492F13;
+    font-size: 14px;
+    width: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+#footer a{text-decoration:none;color:black;cursor:pointer;    font-size: 18px;}
+
+#popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;margin:0px;padding:0px;z-index:9999;clear:none;background-color:rgba(255,255,255,0.5);}
+
+#popupmain{position:fixed;border:3px solid #d6d6d6;background-color:white;width:760px;height:440px;position:absolute;left:50%;top:50%;margin:-240px 0 0 -400px;padding:20px;}
+
+#popupcontent{width:760px;height:400px;overflow-x:hidden;}
+
+#popupclose{width:760px;height:30px;padding-top:15px;text-align:right;cursor:pointer;}
+
+#discountholder{display:none;}
+
+#discountoffset{position:relative;width:100%;height:22px;padding:15px;}
+
+#discountsection{z-index:9999;text-align:center;position:fixed;top:0px;width:100%;height:50px;line-height:50px;background-color:red;border-bottom:white dashed 4px;font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;color:white;}
+
+#exit_pop{position:fixed;top:0;left:0;width:100%;height:100%;margin:0px;padding:0px;z-index:9999;clear:none;background-color:rgba(0,0,0,0.5);}
+
+#exit_pop_content{cursor:pointer;position:fixed;background-image:url(../images/shipping_bg.jpg);width:688px;height:408px;position:absolute;left:50%;top:50%;margin:-204px 0 0 -344px;}
+
+#upsell_pop{position:fixed;top:0;left:0;width:100%;height:100%;margin:0px;padding:0px;z-index:9999;clear:none;background-color:rgba(0,0,0,0.7);}
+
+#upsell_pop_content{width:744px;height:740px;position:absolute;left:50%;margin:0px 0 0 -372px;}
+
+.close_upsell{cursor:pointer;}
+
+#expires{position:absolute;bottom:16px;right:20px;font-family:Arial, Helvetica, sans-serif;font-size:15px;font-weight:bold;color:white;}
+
+#warning{position:absolute;top:30px;left:135px;color:black;font-family:Arial, Helvetica, sans-serif;font-size:15px;line-height:20px;width:868px;height:43px;}
+
+
+.form_title{font-weight:bold;margin-bottom:5px;}
+
+.black_text{color:black;}
+
+#terms a{color:#999;text-decoration:underline;}
+
+#terms_holder{position:absolute;width:676px;top:684px;left:25px;}
+
+#terms{width:606px;background-color:white;font-family:Arial, Helvetica, sans-serif;color:#999;padding-left:35px;padding-right:35px;font-size:10px;}
+
+.red{color:red;}
+
+.item_desc{font-weight:100;font-size:14px;}
+
+.bbottom{border-bottom:1px solid black;margin-top:25px;}
+
+h1#days{color:#A10332;font-size:27px;font-weight:bold;}
+
+div#no-ty{width:100%;background-color:#fff;border-top:1px solid #ddd;border-bottom:1px solid #ddd;margin-top:30px;}
+
+div#ty-button{width:1050px;margin:0 auto;text-align:right;}
+
+#kbody a.skip{background:transparent;border:none;color:black;font-size:16px;font-weight:bold;text-decoration:underline;padding:15px;margin-top:0px;cursor:pointer;}

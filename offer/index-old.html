@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="Offer" ng-controller="DataController">
+
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{S1.name}}</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-language" content="en-us">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.ico"/>
+    <link rel="stylesheet" href="../css/app.css">
+    <!--<link rel="icon" type="image/png" href="images/prod2.png">-->
+
+    <!--Maestro - Index Page Only-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel='stylesheet' href='https://bridge-middletier.xyz/dist/v1/bridge.min.css'> 
+    <script id='bridge-controller' src='https://bridge-middletier.xyz/dist/v1/bridge.min.js' data-url='lkjasodialp.herokuapp.com'></script>
+    <script src='https://bridge-middletier.xyz/dist/modules/clicks.min.js'></script>
+    <!--END: Maestro - Index Page Only-->
+    <script src="../js/controllers/DataController.js"></script> 
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="../css/merged.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <!--<script>redirectIfMobile('../mobile')</script>-->
+    
+    <script>
+        var siteId=param('id');console.log(sessionStorage.getItem('campaignId'))
+        if(sessionStorage.getItem('campaignId')==null)
+        {$.ajax({type:'POST',url:'https://lkjqweag.herokuapp.com/transaction/campaignId',data:JSON.stringify({siteId:siteId}),contentType:'application/json',success:function(response){const campaignId=response.campaignId||'xxx'
+        sessionStorage.setItem('campaignId',campaignId);window.location.reload(!0)}})}
+        function param(name){return(location.search.split(name+'=')[1]||'').split('&')[0]}
+    </script>
+
+    <style>
+        .pos_rel {position:relative;} 
+        .pos_rel>.seal {    position: absolute;width: 155px;}
+        .headerbg {min-height:0px;}
+        .sprite-responsive-keto-bottle {
+            background-position: 0 91.8%;
+            background-size: 281%;
+            width: 92%;
+            height: 393px;
+        }
+        @media only screen and (max-width: 600px) {
+            .formBox {
+                margin: 0 10px;
+            }
+        }
+        
+        .attention {
+            margin: 14px 0;
+            font-family: 'Open Sans';
+            font-weight: 300;
+            font-size: 14px;
+            color: #666666;
+            padding-top: 8px;
+            padding-left: 20px;
+            padding-bottom: 8px;
+            padding-right: 30px;
+            background: #F8F8F8;
+            border: 1px solid #CCCCCC;
+            box-sizing: border-box;
+            border-radius: 3px;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            position: relative;
+        }
+        
+        .icon-close {
+            width: 20px;
+            height: 20px;
+            float: right;
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            background: url(../images/close.png) no-repeat;
+            cursor: pointer;
+        }
+        
+        .icon-exclamation {
+            width: 34px;
+            height: 32px;
+            float: left;
+            margin: 3px 14px 0 -5px;
+            background: url(../images/exclamation.png) no-repeat;
+        }
+        
+        .attention span {
+            color: #DB3D24;
+            font-weight: 700;
+        }
+        
+        @media screen and (max-width: 480px){
+            .attention {
+                font-size: 12px;
+            }
+            
+            .icon-exclamation {
+            width: 34px;
+            height: 62px;
+            }
+        }
+    </style>
+
+</head>
+
+<body cz-shortcut-listen="true">
+    <img src="../images/exit-order_eval1.gif" style="display:none" id="ExitPop" class="img-responsive" border="0">
+    <nav class="navbar" role="navigation">
+        <div class="navbar-default navbar-inner">
+            <div class="contactInfo">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 independent text-left">100% Money Back Guarantee that it works!</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <div class="col-sm-12 attention" style="display: none;">
+                    <div class="icon-exclamation"></div>
+                    Due to increased demand for our offers with free bottles we have a limited supply. As of <span style="color: #DB3D24;"><script type="text/javascript">getDate(0);</script>May 18, 2019</span> we currently have the product <span style="color: #DB3D24;">IN STOCK</span> and are ready to ship within 24 hours of purchase.
+                    <div class="icon-close"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <div class="navbar-brand" >
+                            <p style="color: #5c167a; font-size: 20px; margin-bottom: -5px;">
+                                <img src="../css/d/promo/images/logo2.png" class="logo" alt="img" style="width: 60%; margin-top: -15px;">
+                            </p>
+                            <span>Burn Fat for Energy! BHB Formula!</span>
+                                                  </div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="width: auto;margin-top: 13px;">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse orange12">
+                        <ul class="nav navbar-nav knav">
+                            <li><a href="#science">How it Works</a></li>
+                            <li><a href="#theproof">The Proof</a></li>
+                            <li><a href="#whatyouget">What You Get</a></li>
+                            <li><a href="#ordernow">ORDER NOW</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--/nav-->
+    <section id="header" class="headerbg">
+        <div class="container ">
+            <div class="row">
+                <div class="col-sm-8 nopad">
+                    <div>
+                        
+                            <img class="sprite-responsive-main-grabber-desktop desktop deskimg" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAsAAAAM4AQMAAAD4V8ZsAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAF5JREFUeNrtwTEBAAAAwqD1T20IX6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4DHocAAZUp2toAAAAASUVORK5CYII=" style="margin-bottom:25px;">
+                        
+                           
+                            <img class="sprite-responsive-main-grabber-mobile mobile center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApQAAALMAQMAAABg3LDlAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAFFJREFUeNrtwYEAAAAAw6D5U9/gBFUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8Azq8AAB8roFNwAAAABJRU5ErkJggg==" style="margin-bottom:25px;">
+                        
+                    </div>
+                    <div class="viraltext">
+                        “Find out why this {{S1.name}} weight loss product is going viral”
+                    </div>
+                    <div class="viraltextm">
+                        <!-- CLAIM YOUR FREE BOTTLE! -->
+                        GET YOUR RISK FREE BOTTLE
+                    </div>
+                </div>
+                <div class="col-sm-4 nopad">
+                    <div class="formSeals">
+                       
+                        <img class="sprite-responsive-seals-top center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUoAAABsAQMAAAA2ZWnZAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABpJREFUeNrtwQEBAAAAgiD/r25IQAEAAADwbhIkAAE/dy8kAAAAAElFTkSuQmCC">
+                    </div>
+                    <a name="ordernow"></a>
+                    <div class="formBox" id="form">
+                        <div class="formTop">
+                            Where do we
+                            <br> Send your Bottle?
+                            
+                            <img class="sprite-responsive-form-arrow desktop pulse" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAACIAQMAAABtHH9EAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABJJREFUeNpjYBgFo2AUjIKhDQAEyAABEUnsHQAAAABJRU5ErkJggg==">
+                        </div>
+                        <form id="ProspectForm" class="formBody">
+        <input type="hidden" name="country" value="US" />
+        <div>
+          
+          
+          <input class="required form-control" name="firstName" placeholder="First name" required type="text" value="" style="margin-top: -5px;">
+        </div>
+        <div>
+          
+         <br>
+          <input class="required form-control" name="lastName" placeholder="Last name" style="margin-top: -5px;" required type="text"/>
+        </div>
+<br>
+<select name="shippingCountry" class="required form-control no-error" data-selected="" style="margin-top: -5px;" data-error-message="Please select your country!">
+                                    <option value="US">United States</option>
+                                </select>
+<br>
+        <div>
+          
+        
+          <input class="required form-control" name="address1" placeholder="Your Address" style="margin-top: -5px;" required type="text"/>
+        </div>
+
+<br>
+
+        <div>
+          
+          
+          <input  type='tel' class="required form-control" id='zip' name='zip' placeholder='Zip Code' style="margin-top: -5px;" required/>
+        </div>
+
+<br>
+
+        <div>
+          
+      
+           <input class="required form-control" name="city" id='city' placeholder="Your City" style="margin-top: -5px;" required type="text"/>
+        </div>
+
+<br>
+
+        <div>
+          
+        
+          <select id="state" placeholder="Your State" class="required select form-control" name="state" style="margin-top: -5px;" required>
+                                    <option value="" disabled selected>Select State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                    </select>
+        </div>
+
+<br>
+
+        <div>
+          
+         <input type="email" class="required select form-control" name="email" placeholder="Email Address" style="margin-top: -5px;" required/>
+          
+        </div>
+
+<br>
+
+        <div>
+          
+         <input type="tel" class="required select form-control" name='phone' placeholder='Phone' style="margin-top: -5px;" required/>
+          
+        </div>
+
+<br>
+
+        <div class="pulse">
+            <input type="submit" id='form-btn' type="image" border="0" class="btn_rush" style="background: url(../images/rush-my-order.png) no-repeat center !important; width: 100% !important; max-width: 344px !important; height: 109px; font-size: 0 !important; margin: 0 auto; padding: 0 !important; background-size: contain !important;" />
+        </div>
+
+        <center><img class="sprite-responsive-secureicons center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWIAAAAzAQMAAACXN5DfAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABlJREFUeNrtwYEAAAAAw6D5U1/gCFUBAPANCSoAASn7QusAAAAASUVORK5CYII="><span style="font-size:12px;color:#666"> <!--<i class="fa fa-lock"></i>--> <img src= "../images/lock.png" width="15" height="15"> 256 bit secure form</span></center>
+
+      </form>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section1">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7" style="padding: 30px;">
+                    <h2>Revolutionary Break-through!</h2>
+                    <p class="highlight">Why does it have <strong>Scientists</strong>, <strong>Doctors</strong> and <strong>Celebrities</strong> Buzzing?</p>
+                    <p><strong><span class="maroon underline">The most talked about weight loss product is finally here!</span></strong> A powerful fat burning ketone, BHB has been modified to produce a instant fat burning solution the natural way. Beta-hydroxybutyrate is the first substrate that kicks the metabolic state of ketosis into action. If you take it, BHB is able to start processing in your body resulting in energy and greatly speed up weight loss by putting your body into ketosis. This one BHB Supplement is a revolutionary breakthrough that has the Media in a frenzy!</p>
+                    <p><strong><span style="text-decoration: underline;">{{S1.name}} with BHB is here to stay because of the unsurmountable success people are having losing up to 1lb of fat per day!</span></strong></p>
+                </div>
+                <div class="col-sm-5 nopad">
+                   
+                    <img class="sprite-responsive-feature-product-m center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAd8AAAG5AQMAAAD1Y6xcAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADFJREFUeNrtwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4GaRUAAQXZbCAAAAAASUVORK5CYII=">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <!--desktop-->
+        <div class="theproofD">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &nbsp;
+                    </div>
+                    <div class="col-sm-6">
+                                              <img class="sprite-responsive-ketosis-ketopia-proof-title center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhEAAABoAQMAAAB14jBxAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAB5JREFUeNrtwTEBAAAAwqD1T20LL6AAAAAAAACAlwEboAAB1C6SvAAAAABJRU5ErkJggg==" style="margin-top:107px;">
+                        <h1>Join the Thousands who are already losing up to 1lb per day!</h1>
+                                       <img class="sprite-responsive-the-proof-ketopia-ketosis-testimonials center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAikAAAG3AQMAAABL2VfzAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADVJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCZAXnBAAFEcJRGAAAAAElFTkSuQmCC">
+                        <br>
+                        <p class="text-center">Join the thousands already losing weight with ketosis! Burn fat for energy instead of carbs and feel the elevated energy that ketosis gives you!</p>
+                    </div>
+                    <div class="col-sm-12 cta-btn-added-new">
+                        <a href="#form">
+                           <img class="sprite-responsive-the-proof-ketosis-call-to-action center-block relative2 zup" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABCAAAAEZAQMAAAB8b8bkAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAADtJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMCxAZH9AAGRbQ2hAAAAAElFTkSuQmCC" style="cursor: pointer;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--mobile-->
+        <div class="theproofM">
+            <div class="container">
+                <div class="row">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <a name="science"></a>
+        <div class="row">
+            <div class=" col-lg-12 text-center">
+                <h1 class="mont60 super dark"><br>
+                  HOW DOES IT WORK?
+               </h1>
+                <span class="os28 lighter dark">
+               Ketosis  Forces your body to <span class="orange">Burn Fat for Energy</span> instead of Carbs.
+                </span>
+                <div class="space">&nbsp;</div>
+            </div>
+            <div class="col-sm-5">
+                 <img class="sprite-responsive-traditional-ketosis-diet centered" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYcAAADtAQMAAABuyCu1AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACFJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAA8GUuSgABGgKYKAAAAABJRU5ErkJggg==">
+                <br>
+                <h2>WHY YOUR DIETS FAIL:</h2>
+                <p class="content">Currently with the massive load of cabohydrates in our foods, our bodies are conditioned to burn carbs for energy instead of fat. Because it is an easier energy source for the body to use up.
+                </p>
+                <h4 class="super"><br>
+                  The Problem 
+               </h4>
+                <br>
+                <p class="content">1. Fat stores on the body as carbs are burned as an easy energy fuel. Essentialy we gain more weight year after year.
+                    <br>
+                    <br> 2. Carbs are not the body’s ideal source of energy therefore we are usually left feeling tired, stressed and drained at the end of each day.
+                </p>
+            </div>
+            <div class="col-sm-2">
+                <div class="vsup">
+                    <center>
+                                         <img class="sprite-responsive-vs-vert centered" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAADlAQMAAADdg7P9AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABlJREFUeNpjYBgFo2AUjIJRMApGwSgY7gAACPIAAftbKQ4AAAAASUVORK5CYII=">
+                    </center>
+                </div>
+                <div class="vsdwn">
+                    <center>
+                                              <img class="sprite-responsive-vs-horiz centered" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATsAAAA4AQMAAAC48c2eAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABhJREFUeNrtwQEBAAAAgiD/r25IQAEAfBgI+AABPikttAAAAABJRU5ErkJggg==">
+                    </center>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                               <img class="sprite-responsive-ketosis-diet centered" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZIAAADtAQMAAACvT2EZAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAPBgMCQAARwPFQoAAAAASUVORK5CYII=">
+                <br>
+                <h2>WHY <span class="orange">{{S1.name}}</span> WORKS!</h2>
+                <p class="content">Ketosis is the state where your body is actually burning fat for energy instead of carbs. Ketosis is extremely hard to obtain on your own and takes weeks to accomplish. {{S1.name}} actually helps your body achieve ketosis fast and helps you burn fat for energy instead of carbs!</p>
+                <br>
+                <h4 class="super"><br>
+                  The Solution:
+               </h4>
+                <br>
+                <p class="content">1. When your body is in ketosis, you are actually burning stored fat for energy and not carbs!
+                    <br>
+                    <br> 2. Fat IS the body’s ideal source of energy and when you are in ketosis you experience energy and mental clarity like never before and of course very rapid weight loss.
+                </p>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    <div class="container">
+        <div class=" row">
+            <div class="col-lg-12 centered">
+                <br>
+                <br>
+                <h1 class="os33 lighter dark">Nutritional Ketosis has been believed to difficult to achieve...</h1>
+                <span class="os33 orange super montbold">UNTIL NOW</span>
+            </div>
+        </div>
+    </div>
+    <div class="ketpoia-ketosis-banner">
+        <div class="container">
+            <div class="row"><center>
+                <h2>Burn Fat Instead of Carbs with</h2>
+                   <img class="sprite-responsive-keto-logo-lg center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAesAAAC3AQMAAAAIBuTaAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACJJREFUeNrtwQENAAAAwqD3T20ON6AAAAAAAAAAAAAAAM4MLQkAAWrcEJ0AAAAASUVORK5CYII=" style="line-height:945px;">
+            </center>
+            </div>
+        </div>
+    </div>
+    <a name="whatyouget"></a>
+    <div class="container">
+        <div class="row">
+            <div class=" col-lg-12 text-center">
+                 <img class="sprite-responsive-nongmo center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAABmAQMAAAADEXYhAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABRJREFUeNpjYBgFo2AUjIJRMFgAAAWUAAF2+LisAAAAAElFTkSuQmCC">
+                <h1 class="mont60 super dark">WHAT DO YOU GET?</h1>
+                <span class="os28 lighter dark">
+               The 30 day ketosis supplement that is <span class="orange">Sweeping the Nation</span>!
+                </span>
+                <div class="space">&nbsp;</div>
+            </div>
+            <div class="col-sm-8 col-sm-offset-2">
+                 <img class="sprite-responsive-whatdoyouget center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX8AAAGXAQMAAABhncLLAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACpJREFUeNrtwTEBAAAAwqD1T20JT6AAAAAAAAAAAAAAAAAAAAAAAAAAOBpN5wABJcBjkQAAAABJRU5ErkJggg==">
+                <h1 class="productTitle"> {{S1.name}}<!-- KETO Advanced Energy Ketones --></h1>
+                <h3 class="productSub">Puts your body in Ketosis!</h3>
+                <p class="content">
+                    {{S1.name}} contains Beta-hydroxybutyrate. BHB is the first substrate that kicks the metabolic state of ketosis into action. Revisiting the scenario from before, if you either take supplemental forms or if your body is making beta-hydroxybutyrate, it is able to start processing in your body resulting in energy.
+                </p>
+                <p class="content">Beta-hydroxybutyrate floats around in your blood, and importantly, can cross different important barriers to be able to be turned into energy at all times. One of the most important areas where this happens is in the brain. The blood-brain barrier (BBB) is usually a very tightly regulated interface, but since BHB is such a rock star and so hydrophilic, your brain knows to let it in so it can bring energy to the party at any time. This is one of the main reasons why increased BHB levels lead to heightened mental acuity.*
+                    <br>
+                    <br> Get slim, healthy, and confident again with our unique {{S1.name}} supplement. Ideal for both men and women, {{S1.name}} is a dynamic and powerful ketosis dietary supplement that will assist weight loss, promote abdominal fat burn, and support better digestion and sleep.*
+                    <br>
+                    <br>
+                </p>
+                <ul>
+                    <li>Lose Weight*</li>
+                    <li>Burn Fat in Trouble Areas*</li>
+                    <li>Get into Ketosis Fast!*</li>
+                    <li>Burn Fat for Energy (without the jitters)!*</li>
+                    <li>Better Brain Health!*</li>
+                    <li>Faster Recovery from Exercise!*</li>
+                    <li>Maintain Lean Muscle!* </li>
+                </ul>
+                <p></p>
+              
+            </div>
+            <div class="space">&nbsp;</div>
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="space">&nbsp;</div>
+                <div class="space">&nbsp;</div>
+                <center>
+                    <div class="pulse"><a href="#form">
+                        <btn class="zup c2abtn">ORDER NOW!</btn>
+                    </a></div>
+                </center>
+                <div class="space">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <div class="stayingKetosis">
+        <div class="container">
+            <div class="row">
+                <h3>STAYING IN</h3>
+                <h2>KETOSIS</h2>
+                <h3>IS SIMPLE</h3>
+            </div>
+        </div>
+    </div>
+    <a name="howto"></a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 ketopiainfo">
+                <h2>HOW TO USE  {{S1.name}}</h2>
+                <p><strong> {{S1.name}} is a one-of-a-kind ketosis product designed to help you lose weight and feel amazing.</strong></p>
+                <p> {{S1.name}} is a supplement that allows the body to begin converting into a state of nutritional ketosis. Featuring a special blend of ingredients, {{S1.name}} is a safe and simple way to achieve ketosis without the negative side effects of a typical ketogenic diet. </p>
+                <p> {{S1.name}} is extremely easy to use and experience fast weight loss results with.
+                </p>
+                <ol>
+                    <li>Take 2 {{S1.name}} capsules daily with water</li>
+                    <li>Eat keto-friendly meals and snacks throughout the day</li>
+                    <li>Enjoy improved energy and focus while our body uses fat for energy!</li>
+                </ol>
+                <p></p>
+                <br>
+                <h3>EATING {{S1.name}} FRIENDLY</h3>
+                <p>The best way to support your {{S1.name}} journey is with a diet that consists primarily of fat, with moderate protein and low carbohydrate intake. For best results, aim for a ratio of 70% fat, 25% protein, and 5% carbohydrates.
+                    <br>
+                    <br>
+                </p>
+                <h3>TIPS FOR SUCCESS</h3>
+                <p>Before you begin, you are encouraged to take a "before" photo and an inventory of your body measurements, energy level, mental clarity, and overall sense of wellbeing so you can track your results. It's also wise to get plenty of rest and consult your healthcare professional before starting any health program.</p>
+                <p>Once you are in a state of nutritional ketosis, staying in ketosis is as simple as maintaining a keto-friendly diet, plenty of exercise, and enjoying all the benefits {{S1.name}} has to offer.</p>
+                <p>Don't worry! It's OK to spring for dessert or splurge at the buffet at your next family gathering - {{S1.name}} is always there for you when you need it.</p>
+            </div>
+            <div class="col-sm-4">
+                
+                    
+                                                <img class="sprite-responsive-keto-bottle center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAH0AQMAAADcxqA2AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAChJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAA8GRlAAASsUrMgAAAAASUVORK5CYII=">
+
+                
+                <!--<br>-->
+                <!--<br>-->
+                <p class="small text-center" style="position: relative;top: -62px;"> {{S1.name}} is a daily supplement that helps you get into fat burning ketosis fast!</p>
+            </div>
+            <div class="col-sm-12">
+                <span class="space">&nbsp;</span>
+                <br>
+                <br>
+                <center>
+                    <div class="pulse"><a href="#form">
+                        <btn class="zup c2abtn">GET IT NOW</btn>
+                    </a></div>
+                </center>
+            </div>
+        </div>
+    </div>
+    <div class="allnatural">
+        <div class="container">
+            <div class="row">
+                     <img class="sprite-responsive-goodnews-ketopia center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAxwAAAGLAQMAAAB3NQaZAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAD5JREFUeNrtwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAODeAJvXAAFGD/NQAAAAAElFTkSuQmCC">
+            </div>
+        </div>
+    </div>
+    <a name="theproof"></a>
+    <div class="container">
+        <div class="row">
+            <div class=" col-lg-12 text-center">
+                <h1 class="mont50 super dark centered">WHAT OTHERS ARE SAYING:</h1>
+                <span class="os28 lighter dark">
+               {{S1.name}} is all over the Internet and the results <span class="orange">are Astonishing</span>!
+                </span>
+                <br>
+                <div>
+                    <center>
+                       
+                        <img class="sprite-responsive-fb-logo" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQcAAAB4AQMAAADFZqVEAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAABpJREFUeNrtwQENAAAAwqD3T20PBxQAAADwZg/wAAEWpiu7AAAAAElFTkSuQmCC">
+                    </center>
+                </div>
+                <div class="space">&nbsp;</div>
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <center>
+                                     <img class="sprite-responsive-fbposts1" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAhQAAARuAQMAAACx3Tw7AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAGFJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPwbLUcAAfLNfxQAAAAASUVORK5CYII=">
+                </center>
+            </div>
+            <div class="col-lg-12">
+                <div class="space">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <div class="footerC2a">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-2">
+                    &nbsp;
+                </div>
+                <div class="col-md-8 col-sm-10" style="position:relative;">
+                                    <a href='#form'>
+                    <img class="sprite-responsive-ketosis-footer-cta center-block zup" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqgAAAMDAQMAAABU2nWGAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAFZJREFUeNrtwQEBAAAAgiD/r25IQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8GwMRAAEMx855AAAAAElFTkSuQmCC" style="cursor: pointer;">
+                    </a>
+             
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+                             <img class="sprite-responsive-footer-logos-image center-block" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA8AAAABXAQMAAADxk76+AAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAACFJREFUeNrtwQENAAAAwqD3T20PBxQAAAAAAAAAAADAlQEpHwAByx6+ugAAAABJRU5ErkJggg==">
+                <br>
+                <div class="col-lg-12 content centered" style="font-size:12px;">
+                    <div id="disclaimers">
+                        <p>
+                        </p>
+                        <center>
+                            <a href="../terms.html" class="bridge-modal" style="text-decoration:none; color:#666" >Terms &amp; Conditions</a> &nbsp; &nbsp;
+                            <a href="../privacy.html" class="bridge-modal" style="text-decoration:none; color:#666" >Privacy Policy</a> &nbsp; &nbsp;
+                            <a href="../contact.html" class="bridge-modal" style="text-decoration:none; color:#666" >Contact Us</a> &nbsp; &nbsp; Customer Service: {{data.phone}} <br /><br />
+                    
+                        </center>
+                        <br>
+                        <br>
+                        <center class="disclosure">
+                                    REPRESENTATIONS REGARDING THE EFFICACY AND SAFETY OF {{S1.name}} HAVE NOT BEEN EVALUATED BY THE FOOD AND DRUG ADMINISTRATION. 
+                THE FDA ONLY EVALUATES FOODS AND DRUGS, NOT SUPPLEMENTS LIKE THESE PRODUCTS. THESE PRODUCTS ARE NOT INTENDED TO DIAGNOSE, PREVENT, TREAT, OR CURE ANY DISEASE. 
+                <a href="../keto-study1.pdf" target="blank" class="bridge-modal" style="color:blue;">CLICK HERE</a> OR <a href="../keto-study2.pdf" class="bridge-modal" target="blank" style="color:blue;">CLICK HERE</a> 
+                TO FIND EVIDENCE OF A TEST, ANALYSIS, RESEARCH, OR STUDY DESCRIBING THE BENEFITS, PERFORMANCE OR EFFICACY OF BASED ON THE EXPERTISE OF RELEVANT PROFESSIONALS.
+                         </center>
+                        <p></p>
+                        <p></p>
+                        <p>
+                          
+                            <br> Copyright © 2019  {{S1.name}}
+                            <br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+      <br />
+      <br />
+      <br />
+      
+  
+      
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtvn8sOZCSueiZWgxhaTeNRKyjvPjPnNQ&libraries=places&callback=initMap" async defer></script> 
+
+<!--google maps -->
+<script>
+    $('.navbar-toggle').click(function() {
+      $('.navbar-collapse').slideToggle('in');
+    })
+  // This example requires the Places library. Include the libraries=places
+  // parameter when you first load the API. For example:
+  // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+  function initMap() {
+
+    var input = document.getElementById('address1');
+
+    var options = {
+      types: ['address'],
+      componentRestrictions: { country: "US" }
+    };
+
+    var autocomplete = new google.maps.places.Autocomplete(input, options);
+    var infowindow = new google.maps.InfoWindow();
+    var infowindowContent = document.getElementById('infowindow-content');
+
+
+    infowindow.setContent(infowindowContent);
+
+    autocomplete.addListener('place_changed', function() {
+      infowindow.close();
+
+      var state_check = document.getElementById("state");
+      var place = autocomplete.getPlace();
+
+
+      function updateInput(element, text){
+          element.val(text)
+          element.trigger('click')
+          element.blur()
+          // element.removeClass('error')
+          element.addClass('changed')
+      }
+
+      //fill form fields with data supplied from google map api 
+      for (var i = 0; i < place.address_components.length; i++) {
+
+        for (var j = 0; j < place.address_components[i].types.length; j++) {
+          //console.log(place.address_components[i].long_name);
+          if (place.address_components[i].types[j] === "postal_code") {
+              updateInput($('#zip'), place.address_components[i].long_name)
+          }
+
+          if (place.address_components[i].types[j] === "locality") {
+              updateInput($('#city'), place.address_components[i].long_name)
+          }
+
+          if (place.address_components[i].types[j] === "administrative_area_level_1") {
+            var st = place.address_components[i].long_name;
+            var st2 = "";
+            for (var w = 0; w < state_check.length; w++) {
+              st2 = state_check.options[w].text;
+
+              if (st == st2) {
+                document.getElementById("state").selectedIndex = w;
+              //   $('#state').removeClass('error')
+                $('#state').addClass('changed')
+              }
+            }
+          }
+        }
+      }
+
+
+
+
+      var address = '';
+      if (place.address_components) {
+        address = [
+          (place.address_components[0] && place.address_components[0].short_name || ''),
+          (place.address_components[1] && place.address_components[1].short_name || ''),
+          /*(place.address_components[2] && place.address_components[2].short_name || '')*/
+        ].join(' ');
+      }
+      document.getElementById('address1').value = address;
+    });
+
+  }
+  
+   $(function(){
+     setTimeout(function(){
+         $(".attention").stop().slideToggle('slow');
+     },1200);
+    
+         $(".attention .icon-close").click(function(){
+             $(".attention").stop().slideToggle('slow');
+         });
+    });
+
+</script>
+
+</body>
+
+</html>
